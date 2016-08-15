@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XGY-Pe-6y7">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="vWR-7n-Dhw">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="XGY-Pe-6y7" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="akJ-6Z-GgX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="bAT-LU-B2u" kind="relationship" relationship="rootViewController" id="QcE-iK-u7z"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BsS-U9-LZk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="530" y="-1280"/>
+        </scene>
+        <!--RootVC-->
+        <scene sceneID="Lrg-eK-vAg">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YC2-ON-i4l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="root" id="bAT-LU-B2u" customClass="RootVC" customModule="SSS_Freshman_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JfB-5e-HWN"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ch7-h3-1h9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6VG-AZ-Fnd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="MainBG" translatesAutoresizingMaskIntoConstraints="NO" id="Dtg-ws-Mrl">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" red="0.11372549019607843" green="0.8784313725490196" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.11372549019607843" green="0.89411764705882357" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Dtg-ws-Mrl" secondAttribute="trailing" id="6CL-yv-4Gs"/>
+                            <constraint firstItem="Dtg-ws-Mrl" firstAttribute="top" secondItem="JfB-5e-HWN" secondAttribute="bottom" id="Mbe-8G-2zf"/>
+                            <constraint firstItem="Ch7-h3-1h9" firstAttribute="top" secondItem="Dtg-ws-Mrl" secondAttribute="bottom" id="qiT-tW-Njy"/>
+                            <constraint firstItem="Dtg-ws-Mrl" firstAttribute="leading" secondItem="6VG-AZ-Fnd" secondAttribute="leading" id="tBo-zM-dVw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="hit-aS-THf"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1262" y="-1280"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="MainBG" width="387" height="501"/>
+    </resources>
+</document>
