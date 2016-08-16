@@ -28,6 +28,11 @@ class RootVC: UIViewController {
     override func viewWillDisappear(animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
         super.viewWillDisappear(animated)
-    } 
+    }
+    
+    @IBAction func supportPressed() {
+        let next = self.storyboard?.instantiateViewControllerWithIdentifier("SupportVC") as! SupportVC
+        self.presentViewController(next, animated: true, completion: nil)
+    }
     
 }
