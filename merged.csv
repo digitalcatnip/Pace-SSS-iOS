@@ -1,66 +1,66 @@
 NYC_ACCESSPOINT|-73.898747|40.931210
-NYC_BEEKMAN|-74.005800|40.710577|33 Beekman st|•Student housing
-NYC_Broadway|-74.009344|40.710031|182 Broadway|•Residence Hall
-NYC_Cafe101|-74.004437|40.710538|Cafe 101|•Starbucks/Food Court-1st Fl
-NYC_CareerS|-74.006465|40.711359|Career Services/Dyson Administration and Advisement|•Future for you begins here-14th FL/Dyson-16th Fl
-NYC_Confucius|-74.006387|40.711704|Office of Multicultural Affairs & Dean for Students|•Social Justice Center/Student Government- 9th Fl
-NYC_Court_Yard|-74.004845|40.711099|Court Yard|•Relax in this outdoor area- 1st Fl
-NYC_HEALTH|-74.006690|40.711563|Health Center|•Nurse available-Rm 313 3rd Fl
-NYC_JohnStreet|-74.007566|40.709136|55 John Street|•Residence Halls
-NYC_Library|-74.004317|40.710556|Henry Birnbaum Library|•Study lounges/private group study rooms available-1st Fl
-NYC_Lubin|-74.005084|40.711196|Lubin School of Business|•The business school of Pace University
-NYC_Maria|-74.004416|40.710814|Maria's Tower|•TV lounge and a study lounge on every floor
-NYC_OnePacePlaza|-74.005452|40.711590|One Pace Plaza|Lubin Administration and Advisement-4th FL
-NYC_OnePacePlaza_CCAR|-74.005156|40.711335|Center for Undergraduate Research Experiences |•CCAR Rm-Y31–3rd Fl
-NYC_OnePacePlaza_Honors|-74.005457|40.711489|Office for Student Success/Honors College|•Office for any need on campus Rm-Y21–2nd FL/Rm W209A
-NYC_OnePace_IT|-74.005286|40.711224|Information Technology Center|•Tech support available- 2nd Fl
-NYC_OnePace_OSA|-74.004995|40.711473|Office of Student Assistance|•Holds/Financial questions/Degree verification -1st Fl
-NYC_OnePace_TUTORING|-74.006542|40.711491|Tutoring Center/First Year Experience/Advising Center for Exploring Majors|•Student/Professional tutors and more available- 2nd Fl
-NYC_ParksRow|-74.006211|40.711674|41 Parks Row|•Classrooms and offices/SDCA-8th
-NYC_ParksRow_Bookstore|-74.006244|40.711616|Barns & Noble BookStore|•Purchase books,apparel and more
-NYC_SSS|-74.006422|40.711416|Student Support Services|•First year student support/CURE- 4th Fl
-NYC_Schimmel|-74.004623|40.710846|Schimmel Center|Performance to the arts – B level
-NYC_William|-74.005368|40.709811
-NYC_William140|-74.006296|40.709313|140 William Street|•Performing Arts
-NYC_William163_IP|-74.006369|40.710164|International Programs and Services|•Study Abroad/International Student AD-16th Fl
-NYC_WilliamII|-74.006147|40.710184
+NYC_BEEKMAN|-74.005800|40.710577|33 Beekman st|•Student housing|dormmkr
+NYC_Broadway|-74.009344|40.710031|182 Broadway|•Residence Hall|dormmkr
+NYC_Cafe101|-74.004437|40.710538|Cafe 101|•Starbucks/Food Court-1st Fl|pace_kessel
+NYC_CareerS|-74.006465|40.711359|Career Services/Dyson Administration and Advisement|•Future for you begins here-14th FL/Dyson-16th Fl|csmkr
+NYC_Confucius|-74.006387|40.711704|Office of Multicultural Affairs & Dean for Students|•Social Justice Center/Student Government- 9th Fl|socialjusticemkr
+NYC_Court_Yard|-74.004845|40.711099|Court Yard|•Relax in this outdoor area- 1st Fl|courtyardmkr
+NYC_HEALTH|-74.006690|40.711563|Health Center|•Nurse available-Rm 313 3rd Fl|healthmkr
+NYC_JohnStreet|-74.007566|40.709136|55 John Street|•Residence Halls|dormmkr
+NYC_Library|-74.004317|40.710556|Henry Birnbaum Library|•Study lounges/private group study rooms available-1st Fl|pace_library
+NYC_Lubin|-74.005084|40.711196|Lubin School of Business|•The business school of Pace University|classmkr
+NYC_Maria|-74.004416|40.710814|Maria's Tower|•TV lounge and a study lounge on every floor|maria_tower
+NYC_OnePacePlaza|-74.005452|40.711590|One Pace Plaza|Lubin Administration and Advisement-4th FL|pace_one_plaza
+NYC_OnePacePlaza_CCAR|-74.005156|40.711335|Center for Undergraduate Research Experiences |•CCAR Rm-Y31–3rd Fl|undergrademkr
+NYC_OnePacePlaza_Honors|-74.005457|40.711489|Office for Student Success/Honors College|•Office for any need on campus Rm-Y21–2nd FL/Rm W209A|studentsuccessmkr
+NYC_OnePace_IT|-74.005286|40.711224|Information Technology Center|•Tech support available- 2nd Fl|itmkr
+NYC_OnePace_OSA|-74.004995|40.711473|Office of Student Assistance|•Holds/Financial questions/Degree verification -1st Fl|pace_osa_icon
+NYC_OnePace_TUTORING|-74.006542|40.711491|Tutoring Center/First Year Experience/Advising Center for Exploring Majors|•Student/Professional tutors and more available- 2nd Fl|tutormkr
+NYC_ParksRow|-74.006211|40.711674|41 Parks Row|•Classrooms and offices/SDCA-8th|classmkr
+NYC_ParksRow_Bookstore|-74.006244|40.711616|Barns & Noble BookStore|•Purchase books,apparel and more|pace_library_kid
+NYC_SSS|-74.006422|40.711416|Student Support Services|•First year student support/CURE- 4th Fl|sssmkr
+NYC_Schimmel|-74.004623|40.710846|Schimmel Center|Performance to the arts – B level|schimmelmkr
+NYC_William|-74.005368|40.709811|156 William Street|•Counseling Center–8th FL/Human Resources-5th Fl|hrmkr
+NYC_William140|-74.006296|40.709313|140 William Street|•Performing Arts|schimmelmkr
+NYC_William163_IP|-74.006369|40.710164|International Programs and Services|•Study Abroad/International Student AD-16th Fl|dormmkr
+NYC_WilliamII|-74.006147|40.710184|163 William Street|•Seidenberg School of Computer Science-2nd Fl|seidenbergmkr
 NYC_fulton|-74.007007|40.709703
 PLV_A|-73.807309|41.125529
 PLV_ATHELTICS|-73.810408|41.127869
-PLV_Alumni|-73.808086|41.129610|Alumni Hall|NEW Student dormitory part of the master plan & Security Office
+PLV_Alumni|-73.808086|41.129610|Alumni Hall|NEW Student dormitory part of the master plan & Security Office|dormmkr
 PLV_B|-73.807561|41.125008
-PLV_BASEBALL|-73.811428|41.129816
-PLV_BUSSTOP_MILLER|-73.808884|41.127006
-PLV_BUSSTOP_NORTH|-73.804574|41.127794
-PLV_BUSSTOP_WILCOX|-73.807798|41.125930
+PLV_BASEBALL|-73.811428|41.129816|Baseball Field|NEW Baseball field near Goldstien Gym|baseballmker
+PLV_BUSSTOP_MILLER|-73.808884|41.127006|Bus Stop|Campus shuttle stop- Entrance 2|bus_stop
+PLV_BUSSTOP_NORTH|-73.804574|41.127794|Bus Stop|Campus shuttle stop-North Entrance 3|bus_stop
+PLV_BUSSTOP_WILCOX|-73.807798|41.125930|Bus Stop|Campus shuttle stop- Entrance 1|bus_stop
 PLV_C|-73.809089|41.125372
-PLV_Choate|-73.809465|41.128592|Choate House|English Department and Art show
+PLV_Choate|-73.809465|41.128592|Choate House|English Department and Art show|choatemkr
 PLV_D|-73.809075|41.126038
-PLV_DYSON|-73.808012|41.125481
+PLV_DYSON|-73.808012|41.125481|Dyson Hall|Home to all Science students & Science Professors|classmkr
 PLV_E|-73.809072|41.126806
-PLV_Elm|-73.807263|41.128575|Elm Hall|NEW Student dormitory part of the master plan
-PLV_EnvironmentalCenter|-73.808475|41.130207
+PLV_Elm|-73.807263|41.128575|Elm Hall|NEW Student dormitory part of the master plan|dormmkr
+PLV_EnvironmentalCenter|-73.808475|41.130207|Environmental Center|Charming place open to all and is especially a favorite destination of families with young children.|environmentmkr
 PLV_F|-73.810249|41.126912
-PLV_FITTRAIL|-73.810249|41.131481
+PLV_FITTRAIL|-73.810249|41.131481|Fit trail|On campus trail for walking|fit
 PLV_FOOTBALL|-73.810629|41.128487
-PLV_GOLDSTEIN|-73.805302|41.126664
-PLV_GOLDSTEINGYM|-73.809295|41.129429
+PLV_GOLDSTEIN|-73.805302|41.126664|Goldstien Academic Center|Home of Lubin and Computer Science students|classmkr
+PLV_GOLDSTEINGYM|-73.809295|41.129429|Goldstien Fitness Center|Gym,Pool & Basketball courts & Health Center|pace_gym_dogpound
 PLV_H|-73.809759|41.129091
 PLV_I|-73.808624|41.129500
-PLV_Kessel|-73.808743|41.128397|Kessel Center|Campus Food & Dinning Hall,Lounges,Bookstore
+PLV_Kessel|-73.808743|41.128397|Kessel Center|Campus Food & Dinning Hall,Lounges,Bookstore|pace_kessel
 PLV_LAT|-73.808344|41.128393
-PLV_LIENHARD|-73.809692|41.127413
-PLV_Library|-73.807441|41.127590|Mortola Library|Open 24 Hours for" +"studying and group work
-PLV_Marks|-73.808189|41.125831|Marks Hall|Welcome Center & Mathematics department
-PLV_Martin|-73.806595|41.129335|Martin Hall|Student dormitory located near Entrance 3
-PLV_Miller|-73.809095|41.127081|Miller Hall|College Academic Building, College Classroom
-PLV_North|-73.805270|41.128309|North Hall|Student dormitory located near Entrance 3
+PLV_LIENHARD|-73.809692|41.127413|Lienhard Hall|College Academic Building and College Nursing Building|classmkr
+PLV_Library|-73.807441|41.127590|Mortola Library|Open 24 Hours for" +"studying and group work|pace_library
+PLV_Marks|-73.808189|41.125831|Marks Hall|Welcome Center & Mathematics department|pace_dorms
+PLV_Martin|-73.806595|41.129335|Martin Hall|Student dormitory located near Entrance 3|dormmkr
+PLV_Miller|-73.809095|41.127081|Miller Hall|College Academic Building, College Classroom|classmkr
+PLV_North|-73.805270|41.128309|North Hall|Student dormitory located near Entrance 3|dormmkr
 PLV_O|-73.803973|41.127906
-PLV_OSA|-73.808973|41.131604|Office of Student Assistance|Services of Financial Aid, Student Accounts
+PLV_OSA|-73.808973|41.131604|Office of Student Assistance|Services of Financial Aid, Student Accounts|pace_osa_icon
 PLV_P|-73.808337|41.131209
-PLV_Pond|-73.808238|41.127508|Choate Pond|Pace's iconic land mark
+PLV_Pond|-73.808238|41.127508|Choate Pond|Pace's iconic land mark|pondmkr
 PLV_T|-73.806636|41.127156
 PLV_U|-73.804735|41.127120
-PLV_WILCOX|-73.807506|41.126033
+PLV_WILCOX|-73.807506|41.126033|Wilcox Hall|Academic Building & Technical Support- first floor|classmkr
 PLV_X|-73.805277|41.127439
 PLV_Z|-73.807524|41.126950

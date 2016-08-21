@@ -17,6 +17,7 @@ def parse_markers(line):
         d = data[values[0]]
         d["title"] = values[1]
         d["description"] = values[2].strip()
+        d["icon"] = values[3].strip()
         data[values[0]] = d
 
 for line in f:
@@ -28,6 +29,6 @@ keys = sorted(data)
 for key in keys:
     d = data[key]
     if "title" in d:
-        print("{0}|{1}|{2}|{3}|{4}".format(key, d["lat"], d["long"], d["title"], d["description"]))
+        print("{0}|{1}|{2}|{3}|{4}|{5}".format(key, d["lat"], d["long"], d["title"], d["description"], d["icon"]))
     else:
         print("{0}|{1}|{2}".format(key, d["lat"], d["long"]))
