@@ -490,6 +490,24 @@
             </objects>
             <point key="canvasLocation" x="1262" y="-1280"/>
         </scene>
+        <!--MapVC-->
+        <scene sceneID="31v-6C-Plv">
+            <objects>
+                <viewController id="Eiv-0j-DYo" customClass="MapVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KBp-SN-OKR"/>
+                        <viewControllerLayoutGuide type="bottom" id="dkq-Dl-aVr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="u8c-3J-WDe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Tm-JC-ERQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2008" y="-1280"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Blackboard" width="200" height="196"/>
