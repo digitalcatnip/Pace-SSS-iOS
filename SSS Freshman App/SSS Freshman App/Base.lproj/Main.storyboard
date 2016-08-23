@@ -338,6 +338,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbm-VM-igD" userLabel="CampusMap">
                                         <rect key="frame" x="5" y="0.0" width="175" height="100"/>
                                         <state key="normal" image="CampusMap"/>
+                                        <connections>
+                                            <segue destination="Eiv-0j-DYo" kind="show" id="eP8-fN-Mfn"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VgH-Mk-wVz" userLabel="Calendar">
                                         <rect key="frame" x="195" y="0.0" width="175" height="100"/>
@@ -490,10 +493,10 @@
             </objects>
             <point key="canvasLocation" x="1262" y="-1280"/>
         </scene>
-        <!--MapVC-->
+        <!--MapsVC-->
         <scene sceneID="31v-6C-Plv">
             <objects>
-                <viewController id="Eiv-0j-DYo" customClass="MapVC" sceneMemberID="viewController">
+                <viewController id="Eiv-0j-DYo" customClass="MapsVC" customModule="SSS_Freshman_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KBp-SN-OKR"/>
                         <viewControllerLayoutGuide type="bottom" id="dkq-Dl-aVr"/>
@@ -501,8 +504,70 @@
                     <view key="view" contentMode="scaleToFill" id="u8c-3J-WDe">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DCF-Kw-ie6">
+                                <rect key="frame" x="20" y="20" width="560" height="61"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g49-7t-kf6">
+                                        <rect key="frame" x="8" y="0.0" width="302" height="56"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Npm-h1-ceO">
+                                        <rect key="frame" x="426" y="0.0" width="76" height="56"/>
+                                        <state key="normal" image="cover"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibm-BS-BPf">
+                                        <rect key="frame" x="510" y="8" width="45" height="45"/>
+                                        <state key="normal" image="google_earth"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9E-yH-IRj">
+                                        <rect key="frame" x="318" y="0.0" width="100" height="56"/>
+                                        <state key="normal" image="search_campus_button"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="ibm-BS-BPf" firstAttribute="leading" secondItem="Npm-h1-ceO" secondAttribute="trailing" constant="8" id="1qZ-Ki-cke"/>
+                                    <constraint firstAttribute="bottom" secondItem="l9E-yH-IRj" secondAttribute="bottom" constant="5" id="9D9-uH-DhB"/>
+                                    <constraint firstItem="Npm-h1-ceO" firstAttribute="leading" secondItem="l9E-yH-IRj" secondAttribute="trailing" constant="8" id="DIE-m8-ka0"/>
+                                    <constraint firstAttribute="trailing" secondItem="Npm-h1-ceO" secondAttribute="trailing" constant="8" id="SlS-eb-A2N"/>
+                                    <constraint firstItem="l9E-yH-IRj" firstAttribute="leading" secondItem="g49-7t-kf6" secondAttribute="trailing" constant="8" id="Thk-KX-t7l"/>
+                                    <constraint firstAttribute="trailing" secondItem="ibm-BS-BPf" secondAttribute="trailing" constant="5" id="UjW-7o-hyl"/>
+                                    <constraint firstItem="Npm-h1-ceO" firstAttribute="top" secondItem="DCF-Kw-ie6" secondAttribute="top" id="W60-03-frB"/>
+                                    <constraint firstAttribute="bottom" secondItem="Npm-h1-ceO" secondAttribute="bottom" constant="5" id="aVl-Ld-EJ2"/>
+                                    <constraint firstItem="l9E-yH-IRj" firstAttribute="top" secondItem="DCF-Kw-ie6" secondAttribute="top" id="f1c-ET-gQH"/>
+                                    <constraint firstItem="g49-7t-kf6" firstAttribute="leading" secondItem="DCF-Kw-ie6" secondAttribute="leading" constant="8" id="fnn-eB-cN4"/>
+                                    <constraint firstItem="ibm-BS-BPf" firstAttribute="top" secondItem="DCF-Kw-ie6" secondAttribute="top" constant="8" id="kyr-DB-kDp"/>
+                                    <constraint firstItem="g49-7t-kf6" firstAttribute="top" secondItem="DCF-Kw-ie6" secondAttribute="top" id="om7-e0-hjn"/>
+                                    <constraint firstAttribute="bottom" secondItem="g49-7t-kf6" secondAttribute="bottom" constant="5" id="pT0-49-WQs"/>
+                                    <constraint firstAttribute="bottom" secondItem="ibm-BS-BPf" secondAttribute="bottom" constant="8" id="qCK-s0-V1k"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="SlS-eb-A2N"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lle-NN-hH1">
+                                <rect key="frame" x="0.0" y="81" width="600" height="519"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dkq-Dl-aVr" firstAttribute="top" secondItem="Lle-NN-hH1" secondAttribute="bottom" id="3W4-fE-QcT"/>
+                            <constraint firstAttribute="trailing" secondItem="Lle-NN-hH1" secondAttribute="trailing" id="7ur-Mg-ElA"/>
+                            <constraint firstItem="Lle-NN-hH1" firstAttribute="top" secondItem="DCF-Kw-ie6" secondAttribute="bottom" id="8pk-ur-nKo"/>
+                            <constraint firstItem="Lle-NN-hH1" firstAttribute="leading" secondItem="u8c-3J-WDe" secondAttribute="leading" id="LL2-Uf-rq5"/>
+                            <constraint firstItem="DCF-Kw-ie6" firstAttribute="top" secondItem="KBp-SN-OKR" secondAttribute="bottom" id="UTR-cy-RII"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DCF-Kw-ie6" secondAttribute="trailing" id="byJ-fu-lkj"/>
+                            <constraint firstItem="DCF-Kw-ie6" firstAttribute="leading" secondItem="u8c-3J-WDe" secondAttribute="leadingMargin" id="woH-QT-euK"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="Lle-NN-hH1" id="gUe-7a-sGo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Tm-JC-ERQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -525,5 +590,8 @@
         <image name="Support" width="145" height="200"/>
         <image name="SupportTeam" width="373" height="34"/>
         <image name="Tutoring" width="200" height="216"/>
+        <image name="cover" width="76" height="46"/>
+        <image name="google_earth" width="45" height="45"/>
+        <image name="search_campus_button" width="100" height="50"/>
     </resources>
 </document>

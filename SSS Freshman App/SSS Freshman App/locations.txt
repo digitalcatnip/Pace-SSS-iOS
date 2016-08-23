@@ -48,7 +48,7 @@ PLV_GOLDSTEINGYM|-73.809295|41.129429|Goldstien Fitness Center|Gym,Pool & Basket
 PLV_H|-73.809759|41.129091
 PLV_I|-73.808624|41.129500
 PLV_Kessel|-73.808743|41.128397|Kessel Center|Campus Food & Dinning Hall,Lounges,Bookstore|pace_kessel
-PLV_LAT|-73.808344|41.128393
+PLV_LOC|-73.808344|41.128393
 PLV_LIENHARD|-73.809692|41.127413|Lienhard Hall|College Academic Building and College Nursing Building|classmkr
 PLV_Library|-73.807441|41.127590|Mortola Library|Open 24 Hours for" +"studying and group work|pace_library
 PLV_Marks|-73.808189|41.125831|Marks Hall|Welcome Center & Mathematics department|pace_dorms

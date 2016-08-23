@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "search_campus_button.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "google_earth.png",
       "scale" : "2x"
     },
     {

@@ -35,6 +35,8 @@
 		1AF526C21D6A68DF001E1B83 /* GoogleMapsBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A7284141D67C61B0078C862 /* GoogleMapsBase.framework */; };
 		1AF526C31D6A68F1001E1B83 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A72841A1D67C61B0078C862 /* GoogleMaps.framework */; };
 		1AF526C41D6A68F1001E1B83 /* GoogleMapsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A72841B1D67C61B0078C862 /* GoogleMapsCore.framework */; };
+		1AF526C61D6BEACF001E1B83 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF526C51D6BEACF001E1B83 /* Location.swift */; };
+		1AF526CB1D6BF506001E1B83 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1AF526CA1D6BF506001E1B83 /* GoogleMaps.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +71,8 @@
 		1A9336491D62A77500B3ABFC /* ImportantContacts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportantContacts.swift; sourceTree = "<group>"; };
 		1A93364B1D62A8A200B3ABFC /* PhoneNumberCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumberCell.swift; sourceTree = "<group>"; };
 		1ACA4C031D621F2200DEB0C0 /* SupportVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportVC.swift; sourceTree = "<group>"; };
+		1AF526C51D6BEACF001E1B83 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		1AF526CA1D6BF506001E1B83 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = "Dependencies/GoogleMaps-2.0.1/Subspecs/Maps/Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +203,7 @@
 			children = (
 				1A7284991D67CADA0078C862 /* MapVC.swift */,
 				1A0E86241D67DD9800A2DC2A /* locations.txt */,
+				1AF526C51D6BEACF001E1B83 /* Location.swift */,
 			);
 			name = Map;
 			sourceTree = "<group>";
@@ -229,6 +234,7 @@
 				1A7863BE1D620ADE004C1DC4 /* RootGroup */,
 				1ACA4C021D621F1100DEB0C0 /* Support */,
 				1A7863AA1D6206C9004C1DC4 /* AppDelegate.swift */,
+				1AF526CA1D6BF506001E1B83 /* GoogleMaps.bundle */,
 				1A7863B11D6206CA004C1DC4 /* Assets.xcassets */,
 				1A7863B61D6206CA004C1DC4 /* Info.plist */,
 				1A7863B31D6206CA004C1DC4 /* LaunchScreen.storyboard */,
@@ -358,6 +364,7 @@
 				1A7863B51D6206CA004C1DC4 /* LaunchScreen.storyboard in Resources */,
 				1A7863B21D6206CA004C1DC4 /* Assets.xcassets in Resources */,
 				1A9336461D62A6C400B3ABFC /* important_numbers.txt in Resources */,
+				1AF526CB1D6BF506001E1B83 /* GoogleMaps.bundle in Resources */,
 				1A7863B01D6206C9004C1DC4 /* Main.storyboard in Resources */,
 				1A0E86251D67DD9800A2DC2A /* locations.txt in Resources */,
 			);
@@ -372,6 +379,7 @@
 			files = (
 				1ACA4C041D621F2300DEB0C0 /* SupportVC.swift in Sources */,
 				1A93364A1D62A77500B3ABFC /* ImportantContacts.swift in Sources */,
+				1AF526C61D6BEACF001E1B83 /* Location.swift in Sources */,
 				1A34B5CA1D623CC500751EE6 /* WebViewVC.swift in Sources */,
 				1A93364C1D62A8A200B3ABFC /* PhoneNumberCell.swift in Sources */,
 				1A7863BD1D620AD8004C1DC4 /* RootVC.swift in Sources */,
