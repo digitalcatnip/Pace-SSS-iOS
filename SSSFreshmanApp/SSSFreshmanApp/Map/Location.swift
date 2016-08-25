@@ -8,6 +8,21 @@
 
 import Foundation
 import CoreLocation
+import UIKit
+
+class MarkerIcons: NSObject {
+    static var images: [String:UIImage] = [String:UIImage]()
+    
+    static func getImageForMarker(icon: String) -> UIImage? {
+        if let image = images[icon] {
+            return image
+        } else {
+            let image = UIImage(named: icon)
+            images[icon] = image
+            return image
+        }
+    }
+}
 
 class Location: NSObject {
     var key:String = ""
@@ -20,10 +35,10 @@ class Location: NSObject {
     func initializeFromLine(line:String) {
         let components = line.componentsSeparatedByString("|")
         key = components[0]
-        if let lat = CLLocationDegrees(components[1]) {
+        if let lat = CLLocationDegrees(components[2]) {
             latitude = lat
         }
-        if let lon = CLLocationDegrees(components[2]) {
+        if let lon = CLLocationDegrees(components[1]) {
             longitude = lon
         }
         if(components.count > 3) {

@@ -72,7 +72,8 @@
 		1A93364B1D62A8A200B3ABFC /* PhoneNumberCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumberCell.swift; sourceTree = "<group>"; };
 		1ACA4C031D621F2200DEB0C0 /* SupportVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportVC.swift; sourceTree = "<group>"; };
 		1AF526C51D6BEACF001E1B83 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
-		1AF526CA1D6BF506001E1B83 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = "Dependencies/GoogleMaps-2.0.1/Subspecs/Maps/Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle"; sourceTree = "<group>"; };
+		1AF526CA1D6BF506001E1B83 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = "<group>"; };
+		1AF526DE1D6E3D0C001E1B83 /* Pace SSS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pace SSS-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,8 +107,9 @@
 			isa = PBXGroup;
 			children = (
 				1A7283681D67C61B0078C862 /* GoogleMaps-2.0.1 */,
+				1AF526DE1D6E3D0C001E1B83 /* Pace SSS-Bridging-Header.h */,
 			);
-			name = Dependencies;
+			path = Dependencies;
 			sourceTree = "<group>";
 		};
 		1A7283681D67C61B0078C862 /* GoogleMaps-2.0.1 */ = {
@@ -115,8 +117,7 @@
 			children = (
 				1A7284111D67C61B0078C862 /* Subspecs */,
 			);
-			name = "GoogleMaps-2.0.1";
-			path = "Dependencies/GoogleMaps-2.0.1";
+			path = "GoogleMaps-2.0.1";
 			sourceTree = "<group>";
 		};
 		1A7284111D67C61B0078C862 /* Subspecs */ = {
@@ -201,11 +202,11 @@
 		1A7284981D67CAC00078C862 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				1AF526C51D6BEACF001E1B83 /* Location.swift */,
 				1A7284991D67CADA0078C862 /* MapVC.swift */,
 				1A0E86241D67DD9800A2DC2A /* locations.txt */,
-				1AF526C51D6BEACF001E1B83 /* Location.swift */,
 			);
-			name = Map;
+			path = Map;
 			sourceTree = "<group>";
 		};
 		1A78639E1D6206C9004C1DC4 = {
@@ -213,7 +214,7 @@
 			children = (
 				1A7284971D67C6F40078C862 /* Frameworks */,
 				1A7863A81D6206C9004C1DC4 /* Products */,
-				1A7863A91D6206C9004C1DC4 /* SSS Freshman App */,
+				1A7863A91D6206C9004C1DC4 /* SSSFreshmanApp */,
 			);
 			sourceTree = "<group>";
 		};
@@ -225,22 +226,22 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1A7863A91D6206C9004C1DC4 /* SSS Freshman App */ = {
+		1A7863A91D6206C9004C1DC4 /* SSSFreshmanApp */ = {
 			isa = PBXGroup;
 			children = (
-				1A7284981D67CAC00078C862 /* Map */,
-				1A7283671D67C5F10078C862 /* Dependencies */,
 				1A9336481D62A76000B3ABFC /* Contacts */,
+				1A7283671D67C5F10078C862 /* Dependencies */,
+				1A7284981D67CAC00078C862 /* Map */,
 				1A7863BE1D620ADE004C1DC4 /* RootGroup */,
 				1ACA4C021D621F1100DEB0C0 /* Support */,
 				1A7863AA1D6206C9004C1DC4 /* AppDelegate.swift */,
-				1AF526CA1D6BF506001E1B83 /* GoogleMaps.bundle */,
 				1A7863B11D6206CA004C1DC4 /* Assets.xcassets */,
+				1AF526CA1D6BF506001E1B83 /* GoogleMaps.bundle */,
 				1A7863B61D6206CA004C1DC4 /* Info.plist */,
 				1A7863B31D6206CA004C1DC4 /* LaunchScreen.storyboard */,
 				1A7863AE1D6206C9004C1DC4 /* Main.storyboard */,
 			);
-			path = "SSS Freshman App";
+			path = SSSFreshmanApp;
 			sourceTree = "<group>";
 		};
 		1A7863BE1D620ADE004C1DC4 /* RootGroup */ = {
@@ -501,28 +502,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/SSS",
-					Freshman,
-					"App/Dependencies/GoogleMaps-2.0.1/Subspecs/Base/Frameworks",
-					"$(PROJECT_DIR)/SSS",
-					Freshman,
-					"App/Dependencies/GoogleMaps-2.0.1/Subspecs/M4B/Frameworks",
-					"$(PROJECT_DIR)/SSS",
-					Freshman,
-					"App/Dependencies/GoogleMaps-2.0.1/Subspecs/Maps/Frameworks",
-					"$(PROJECT_DIR)/SSS",
-					Freshman,
-					"App/Dependencies/GoogleMaps-2.0.1/Subspecs/Base/Frameworks",
-					"$(PROJECT_DIR)/SSS",
-					Freshman,
-					"App/Dependencies/GoogleMaps-2.0.1/Subspecs/Maps/Frameworks",
+					"SSSFreshmanApp/Dependencies/GoogleMaps-2.0.1/**",
 				);
-				INFOPLIST_FILE = "SSS Freshman App/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SSSFreshmanApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "Dependencies/**";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.digitalplight.PaceSSS.SSS-Freshman-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SSSFreshmanApp/Dependencies/Pace SSS-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -532,29 +520,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/SSS",
-					Freshman,
-					"App/Dependencies/GoogleMaps-2.0.1/Subspecs/Base/Frameworks",
-					"$(PROJECT_DIR)/SSS",
-					Freshman,
-					"App/Dependencies/GoogleMaps-2.0.1/Subspecs/M4B/Frameworks",
-					"$(PROJECT_DIR)/SSS",
-					Freshman,
-					"App/Dependencies/GoogleMaps-2.0.1/Subspecs/Maps/Frameworks",
-					"$(PROJECT_DIR)/SSS",
-					Freshman,
-					"App/Dependencies/GoogleMaps-2.0.1/Subspecs/Base/Frameworks",
-					"$(PROJECT_DIR)/SSS",
-					Freshman,
-					"App/Dependencies/GoogleMaps-2.0.1/Subspecs/Maps/Frameworks",
+					"SSSFreshmanApp/Dependencies/GoogleMaps-2.0.1/**",
 				);
-				INFOPLIST_FILE = "SSS Freshman App/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SSSFreshmanApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "Dependencies/**";
 				"LIBRARY_SEARCH_PATHS[arch=*]" = "";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.digitalplight.PaceSSS.SSS-Freshman-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SSSFreshmanApp/Dependencies/Pace SSS-Bridging-Header.h";
 			};
 			name = Release;
 		};
