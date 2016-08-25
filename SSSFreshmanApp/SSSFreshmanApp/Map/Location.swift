@@ -9,6 +9,7 @@
 import Foundation
 import CoreLocation
 import UIKit
+import GoogleMaps
 
 class MarkerIcons: NSObject {
     static var images: [String:UIImage] = [String:UIImage]()
@@ -46,5 +47,17 @@ class Location: NSObject {
             descrip = components[4]
             icon = components[5]
         }
+    }
+    
+    func addToMap(mapView: GMSMapView) {
+        if title.characters.count == 0 {
+            return
+        }
+        let position = CLLocationCoordinate2DMake(latitude, longitude)
+        let marker = GMSMarker(position: position)
+        marker.title = title
+        marker.snippet = descrip
+        marker.icon = MarkerIcons.getImageForMarker(icon)
+        marker.map = mapView
     }
 }

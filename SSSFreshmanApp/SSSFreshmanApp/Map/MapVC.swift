@@ -100,10 +100,23 @@ class MapsVC: UIViewController {
         }
     }
     
+    func updateCampusMarkers() {
+        mapView.clear()
+        let keys = locations.keys.filter() { includeElement in
+            return includeElement.hasPrefix(self.curCampus)
+        }
+        for key in keys {
+            if let loc = locations[key] {
+                loc.addToMap(mapView)
+            }
+        }
+    }
+    
     func campusChanged(updateCampusButton: Bool) {
         if updateCampusButton {
             updateButtons()
         }
+        updateCampusMarkers()
         updateCamera()
     }
     
