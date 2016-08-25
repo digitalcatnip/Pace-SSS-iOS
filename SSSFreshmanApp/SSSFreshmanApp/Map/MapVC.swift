@@ -29,10 +29,6 @@ class MapsVC: UIViewController {
     @IBOutlet weak var campusButton:UIButton!
     @IBOutlet weak var tileButton:UIButton!
 
-    override func loadView() {
-        super.loadView()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadLocations()
@@ -43,14 +39,9 @@ class MapsVC: UIViewController {
         curTileType = .Map
         mapView.mapType = kGMSTypeNormal
         tileButton.imageView?.contentMode = .ScaleAspectFit
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+    //MARK: Location Handling
     func loadLocations() {
         locations = [String:Location]()
         var lines = [String]()
@@ -82,6 +73,7 @@ class MapsVC: UIViewController {
         }
     }
     
+    //MARK: UI Updating
     func updateButtons() {
         if curCampus == "PLV" {
             campusButton.setImage(plvCampusImage, forState: .Normal)
@@ -100,14 +92,34 @@ class MapsVC: UIViewController {
         }
     }
     
+    func getKeysForCampus(campus: String) -> [String] {
+        return locations.keys.filter() { includeElement in
+            return includeElement.hasPrefix(campus)
+        }
+    }
+    
     func updateCampusMarkers() {
         mapView.clear()
-        let keys = locations.keys.filter() { includeElement in
-            return includeElement.hasPrefix(self.curCampus)
-        }
+        let keys = getKeysForCampus(curCampus)
         for key in keys {
             if let loc = locations[key] {
                 loc.addToMap(mapView)
+            }
+        }
+    }
+    
+    func updateMarkersForQuery(query: String) {
+        mapView.clear()
+        if(query.characters.count < 1) {
+            updateCampusMarkers()
+        } else {
+            let keys = getKeysForCampus(curCampus)
+            for key in keys {
+                if let loc = locations[key] {
+                    if loc.title.containsString(query) || loc.descrip.containsString(query) {
+                        loc.addToMap(mapView)
+                    }
+                }
             }
         }
     }
@@ -133,6 +145,7 @@ class MapsVC: UIViewController {
         campusChanged(false)
     }
     
+    //MARK: Button Actions
     @IBAction func switchCampus() {
         if curCampus == "PLV" {
             curCampus = "NYC"
@@ -158,6 +171,26 @@ class MapsVC: UIViewController {
     }
 }
 
+//MARK: Text Field Delegate
+extension MapsVC: UITextFieldDelegate {
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        if let text = textField.text {
+            let nsString = text as NSString
+            let newString = nsString.stringByReplacingCharactersInRange(range, withString: string)
+            updateMarkersForQuery(newString)
+        }
+        
+        return true
+    }
+    
+    func textFieldShouldClear(textField: UITextField) -> Bool {
+        mapView.clear()
+        updateCampusMarkers()
+        return true
+    }
+}
+
+//MARK: Location Manager Delegate
 extension MapsVC: CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         if status == .AuthorizedWhenInUse {
@@ -167,7 +200,6 @@ extension MapsVC: CLLocationManagerDelegate {
         }
     }
     
-    // 6
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first {
             updateCampusWithLocation(location)
