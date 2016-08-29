@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "hookerhoto_words.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "hookerhoto.png",
       "scale" : "2x"
     },
     {

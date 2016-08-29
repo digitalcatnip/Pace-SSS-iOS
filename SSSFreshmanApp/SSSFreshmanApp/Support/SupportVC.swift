@@ -24,8 +24,8 @@ class SupportVC: UIViewController {
         setupButton(literacyButton)
         setupButton(academicButton)
         setupButton(eventsButton)
-        setBorderRadius(johnButton)
-        setBorderRadius(joyceButton)
+//        setBorderRadius(johnButton)
+//        setBorderRadius(joyceButton)
     }
     
     override func didReceiveMemoryWarning() {
@@ -37,8 +37,22 @@ class SupportVC: UIViewController {
         if segue.identifier == "academicSegue"
         {
             if let destinationVC = segue.destinationViewController as? WebViewVC {
-                destinationVC.webAddress = "http://www.pace.edu/dyson/centers/center-for-undergraduate-research-experiences/student-support-services#eli"
+                destinationVC.webAddress = "https://drive.google.com/file/d/0B35gGagDNpQBUVdMSy1HTTF0WWM/view?usp=sharing"
                 destinationVC.titleString = "Academic Services"
+            }
+        }
+        else if segue.identifier == "financialSegue"
+        {
+            if let destinationVC = segue.destinationViewController as? WebViewVC {
+                destinationVC.webAddress = "https://drive.google.com/file/d/0B35gGagDNpQBTDFEc0JJU2dmWFE/view?usp=sharing"
+                destinationVC.titleString = "Financial Counseling"
+            }
+        }
+        else if segue.identifier == "culturalSegue"
+        {
+            if let destinationVC = segue.destinationViewController as? WebViewVC {
+                destinationVC.webAddress = "http://www.pace.edu/dyson/centers/center-for-undergraduate-research-experiences/student-support-services#socialandculturalevents"
+                destinationVC.titleString = "Cultural Events"
             }
         }
     }
@@ -56,33 +70,12 @@ class SupportVC: UIViewController {
             button!.layer.cornerRadius = width / 2.0;
         }
     }
-    
-    func emailSomeone(address:String, message:String) {
-        let toEmail = address.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLHostAllowedCharacterSet())
-        let subject = "From an SSS app user".stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLHostAllowedCharacterSet())
-        let body = message.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLHostAllowedCharacterSet())
-        
-        var url = NSURL(string: "ms-outlook://compose?to=\(toEmail!)&subject=\(subject!)&body=\(body!)")
-        if UIApplication.sharedApplication().canOpenURL(url!) {
-            UIApplication.sharedApplication().openURL(url!)
-        } else {
-            url = NSURL(string: "mailto:?to=\(toEmail!)?subject=\(subject!)&body=\(body)")
-            if UIApplication.sharedApplication().canOpenURL(url!) {
-                UIApplication.sharedApplication().openURL(url!)
-            } else {
-                let alertController = UIAlertController(title: "Email Failed", message: "Could not open MS Outlook or Mail app.", preferredStyle: .Alert)
-                let cancelAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
-                alertController.addAction(cancelAction)
-                self.presentViewController(alertController, animated: true, completion: nil)
-            }
-        }
-    }
- 
+     
     @IBAction func emailJohn() {
-        emailSomeone("jhooker@pace.edu", message: "Hello Mr. Hooker,");
+        EmailAction.emailSomeone("jhooker@pace.edu", message: "Hello Mr. Hooker,", subject: "From an SSS app user", presenter: self);
     }
     
     @IBAction func emailJoyce() {
-        emailSomeone("jlau@pace.edu", message: "Hello Ms. Lau,")
+        EmailAction.emailSomeone("jlau@pace.edu", message: "Hello Ms. Lau,", subject: "From an SSS app user", presenter: self)
     }
 }

@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "joycephoto_words.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "joycephoto.png",
       "scale" : "2x"
     },
     {

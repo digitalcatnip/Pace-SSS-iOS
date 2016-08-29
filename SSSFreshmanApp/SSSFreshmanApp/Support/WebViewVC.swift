@@ -15,6 +15,7 @@ class WebViewVC: UIViewController {
     private var webView: WKWebView?
     var webAddress:String = "http://pace.edu"
     var titleString:String = "Pace"
+    @IBOutlet var ibWebView: UIView?
     
     override func loadView() {
         webView = WKWebView()
@@ -39,6 +40,14 @@ class WebViewVC: UIViewController {
             let req = NSURLRequest(URL: url)
             webView?.loadRequest(req)
         }
+    }
+    
+    @IBAction func emailJohn() {
+        EmailAction.emailSomeone("jhooker@pace.edu", message: "Hello Mr. Hooker,", subject: "From an SSS app user", presenter: self);
+    }
+    
+    @IBAction func emailJoyce() {
+        EmailAction.emailSomeone("jlau@pace.edu", message: "Hello Ms. Lau,", subject: "From an SSS app user", presenter: self)
     }
     
 }

@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "pace_bubble.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "calendar_words.png",
       "scale" : "2x"
     },
     {
