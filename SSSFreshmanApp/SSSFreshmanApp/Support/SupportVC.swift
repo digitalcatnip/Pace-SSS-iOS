@@ -16,8 +16,6 @@ class SupportVC: UIViewController {
     @IBOutlet var eventsButton:UIButton?
     @IBOutlet var johnButton:UIButton?
     @IBOutlet var joyceButton:UIButton?
-    @IBOutlet var normaButton:UIButton?
-    @IBOutlet var mariaButton:UIButton?
 
     
     override func viewDidLoad() {
@@ -28,8 +26,6 @@ class SupportVC: UIViewController {
         setupButton(eventsButton)
         setBorderRadius(johnButton)
         setBorderRadius(joyceButton)
-        setBorderRadius(normaButton)
-        setBorderRadius(mariaButton)
     }
     
     override func didReceiveMemoryWarning() {
@@ -62,17 +58,31 @@ class SupportVC: UIViewController {
     }
     
     func emailSomeone(address:String, message:String) {
-        let toEmail = address
+        let toEmail = address.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLHostAllowedCharacterSet())
         let subject = "From an SSS app user".stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLHostAllowedCharacterSet())
         let body = message.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLHostAllowedCharacterSet())
         
-        let urlString = "mailto:\(toEmail)?subject=\(subject)&body=\(body)"
-        if let url = NSURL(string:urlString) {
-            UIApplication.sharedApplication().openURL(url)
+        var url = NSURL(string: "ms-outlook://compose?to=\(toEmail!)&subject=\(subject!)&body=\(body!)")
+        if UIApplication.sharedApplication().canOpenURL(url!) {
+            UIApplication.sharedApplication().openURL(url!)
+        } else {
+            url = NSURL(string: "mailto:?to=\(toEmail!)?subject=\(subject!)&body=\(body)")
+            if UIApplication.sharedApplication().canOpenURL(url!) {
+                UIApplication.sharedApplication().openURL(url!)
+            } else {
+                let alertController = UIAlertController(title: "Email Failed", message: "Could not open MS Outlook or Mail app.", preferredStyle: .Alert)
+                let cancelAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+                alertController.addAction(cancelAction)
+                self.presentViewController(alertController, animated: true, completion: nil)
+            }
         }
     }
  
     @IBAction func emailJohn() {
         emailSomeone("jhooker@pace.edu", message: "Hello Mr. Hooker,");
+    }
+    
+    @IBAction func emailJoyce() {
+        emailSomeone("jlau@pace.edu", message: "Hello Ms. Lau,")
     }
 }

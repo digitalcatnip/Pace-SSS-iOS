@@ -69,107 +69,51 @@
                                 <rect key="frame" x="40" y="234" width="520" height="52"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="biR-o1-qd8" userLabel="John">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="52"/>
+                                        <rect key="frame" x="20" y="0.0" width="50" height="52"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <accessibility key="accessibilityConfiguration" label="John"/>
                                         <state key="normal" image="Hooker"/>
+                                        <connections>
+                                            <action selector="emailJohn" destination="MP7-kP-4TK" eventType="touchUpInside" id="UM5-VZ-wCQ"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="apA-Yd-UPc" userLabel="J-J Break">
-                                        <rect key="frame" x="50" y="0.0" width="106.5" height="52"/>
+                                        <rect key="frame" x="70" y="0.0" width="380" height="52"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xnY-IJ-cs3" userLabel="Joyce">
-                                        <rect key="frame" x="156.5" y="0.0" width="50" height="52"/>
+                                        <rect key="frame" x="450" y="0.0" width="50" height="52"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <accessibility key="accessibilityConfiguration" label="Joyce"/>
                                         <state key="normal" image="Joyce"/>
-                                    </button>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sLu-1E-NJq" userLabel="J-M Break">
-                                        <rect key="frame" x="206.5" y="0.0" width="107" height="52"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xge-gS-fWo" userLabel="Maria">
-                                        <rect key="frame" x="313.5" y="0.0" width="50" height="52"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <accessibility key="accessibilityConfiguration" label="Maria"/>
-                                        <state key="normal" image="Maria"/>
-                                    </button>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X1H-a0-e1v" userLabel="M-N Break">
-                                        <rect key="frame" x="363.5" y="0.0" width="106.5" height="52"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ir5-vh-Ymg" userLabel="Norma">
-                                        <rect key="frame" x="470" y="0.0" width="50" height="52"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <accessibility key="accessibilityConfiguration" label="Norma"/>
-                                        <state key="normal" image="Norma"/>
+                                        <connections>
+                                            <action selector="emailJoyce" destination="MP7-kP-4TK" eventType="touchUpInside" id="p7h-F2-deZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="apA-Yd-UPc" secondAttribute="bottom" id="13B-eT-NAT"/>
-                                    <constraint firstItem="sLu-1E-NJq" firstAttribute="width" secondItem="X1H-a0-e1v" secondAttribute="width" id="26a-L7-oaN"/>
-                                    <constraint firstAttribute="bottom" secondItem="X1H-a0-e1v" secondAttribute="bottom" id="30c-dN-ZNm"/>
                                     <constraint firstItem="biR-o1-qd8" firstAttribute="top" secondItem="dGN-dI-ffG" secondAttribute="top" id="5PP-iR-OOK"/>
-                                    <constraint firstItem="ir5-vh-Ymg" firstAttribute="top" secondItem="dGN-dI-ffG" secondAttribute="top" id="6ER-3h-jRc"/>
-                                    <constraint firstItem="Xge-gS-fWo" firstAttribute="leading" secondItem="sLu-1E-NJq" secondAttribute="trailing" id="9LA-gK-8yv"/>
-                                    <constraint firstItem="ir5-vh-Ymg" firstAttribute="leading" secondItem="Xge-gS-fWo" secondAttribute="trailing" constant="10" id="9tv-0p-owD"/>
                                     <constraint firstItem="xnY-IJ-cs3" firstAttribute="top" secondItem="dGN-dI-ffG" secondAttribute="top" id="ASY-H2-hW9"/>
                                     <constraint firstItem="biR-o1-qd8" firstAttribute="height" secondItem="xnY-IJ-cs3" secondAttribute="height" id="BXx-Ng-gBM"/>
-                                    <constraint firstItem="X1H-a0-e1v" firstAttribute="top" secondItem="dGN-dI-ffG" secondAttribute="top" id="D9d-CS-jHe"/>
+                                    <constraint firstAttribute="trailing" secondItem="xnY-IJ-cs3" secondAttribute="trailing" constant="20" id="BnW-k9-vVq"/>
                                     <constraint firstItem="xnY-IJ-cs3" firstAttribute="leading" secondItem="biR-o1-qd8" secondAttribute="trailing" constant="10" id="Dff-kH-fUL"/>
                                     <constraint firstItem="apA-Yd-UPc" firstAttribute="leading" secondItem="dGN-dI-ffG" secondAttribute="leading" constant="8" id="FIO-gE-0ci"/>
-                                    <constraint firstAttribute="trailing" secondItem="Xge-gS-fWo" secondAttribute="trailing" id="FLQ-3K-NhJ"/>
                                     <constraint firstAttribute="bottom" secondItem="xnY-IJ-cs3" secondAttribute="bottom" id="FRX-vF-xhE"/>
-                                    <constraint firstItem="Xge-gS-fWo" firstAttribute="height" secondItem="ir5-vh-Ymg" secondAttribute="height" id="KJu-b0-Yr3"/>
-                                    <constraint firstAttribute="bottom" secondItem="sLu-1E-NJq" secondAttribute="bottom" id="Kdw-5h-hJ1"/>
-                                    <constraint firstItem="biR-o1-qd8" firstAttribute="leading" secondItem="dGN-dI-ffG" secondAttribute="leading" id="Kk6-z4-etD"/>
-                                    <constraint firstAttribute="bottom" secondItem="ir5-vh-Ymg" secondAttribute="bottom" id="MCp-Md-ddP"/>
-                                    <constraint firstItem="ir5-vh-Ymg" firstAttribute="height" secondItem="biR-o1-qd8" secondAttribute="height" id="Mcz-wX-5Bw"/>
-                                    <constraint firstItem="X1H-a0-e1v" firstAttribute="leading" secondItem="Xge-gS-fWo" secondAttribute="trailing" id="Ndg-KV-SN2"/>
-                                    <constraint firstItem="ir5-vh-Ymg" firstAttribute="leading" secondItem="X1H-a0-e1v" secondAttribute="trailing" id="Onl-Xz-x58"/>
-                                    <constraint firstItem="Xge-gS-fWo" firstAttribute="top" secondItem="dGN-dI-ffG" secondAttribute="top" id="Qly-uN-mv8"/>
-                                    <constraint firstItem="Xge-gS-fWo" firstAttribute="leading" secondItem="xnY-IJ-cs3" secondAttribute="trailing" constant="10" id="TId-73-z7T"/>
+                                    <constraint firstItem="biR-o1-qd8" firstAttribute="leading" secondItem="dGN-dI-ffG" secondAttribute="leading" constant="20" id="Kk6-z4-etD"/>
                                     <constraint firstItem="apA-Yd-UPc" firstAttribute="top" secondItem="dGN-dI-ffG" secondAttribute="top" id="WZ3-bm-oH1"/>
-                                    <constraint firstItem="sLu-1E-NJq" firstAttribute="leading" secondItem="xnY-IJ-cs3" secondAttribute="trailing" id="Wwr-Kq-IDd"/>
-                                    <constraint firstItem="Xge-gS-fWo" firstAttribute="leading" secondItem="dGN-dI-ffG" secondAttribute="leading" id="Y2U-iP-wa6"/>
                                     <constraint firstItem="biR-o1-qd8" firstAttribute="centerX" secondItem="xnY-IJ-cs3" secondAttribute="centerX" id="Zj2-sg-xSL"/>
-                                    <constraint firstItem="Xge-gS-fWo" firstAttribute="centerX" secondItem="ir5-vh-Ymg" secondAttribute="centerX" id="a3G-Cx-Mn0"/>
-                                    <constraint firstAttribute="bottom" secondItem="Xge-gS-fWo" secondAttribute="bottom" id="bkC-lc-mPN"/>
-                                    <constraint firstItem="sLu-1E-NJq" firstAttribute="top" secondItem="dGN-dI-ffG" secondAttribute="top" id="eH0-Pl-Shz"/>
-                                    <constraint firstItem="xnY-IJ-cs3" firstAttribute="height" secondItem="Xge-gS-fWo" secondAttribute="height" id="exa-S2-1qh"/>
-                                    <constraint firstItem="ir5-vh-Ymg" firstAttribute="width" secondItem="biR-o1-qd8" secondAttribute="width" id="fuT-XM-dn8"/>
-                                    <constraint firstItem="apA-Yd-UPc" firstAttribute="width" secondItem="sLu-1E-NJq" secondAttribute="width" id="gLD-QE-6tD"/>
-                                    <constraint firstAttribute="trailing" secondItem="ir5-vh-Ymg" secondAttribute="trailing" id="ivQ-HQ-FZd"/>
                                     <constraint firstItem="biR-o1-qd8" firstAttribute="width" secondItem="xnY-IJ-cs3" secondAttribute="width" id="j8v-ba-NHm"/>
-                                    <constraint firstItem="xnY-IJ-cs3" firstAttribute="width" secondItem="Xge-gS-fWo" secondAttribute="width" id="n6Z-LW-wEv"/>
-                                    <constraint firstItem="Xge-gS-fWo" firstAttribute="width" secondItem="biR-o1-qd8" secondAttribute="width" id="ntx-xp-hUj"/>
                                     <constraint firstItem="xnY-IJ-cs3" firstAttribute="leading" secondItem="apA-Yd-UPc" secondAttribute="trailing" id="r2p-ot-mOb"/>
-                                    <constraint firstItem="Xge-gS-fWo" firstAttribute="height" secondItem="biR-o1-qd8" secondAttribute="height" id="suj-ug-zgV"/>
                                     <constraint firstAttribute="bottom" secondItem="biR-o1-qd8" secondAttribute="bottom" id="v2F-IP-p4a"/>
-                                    <constraint firstItem="ir5-vh-Ymg" firstAttribute="width" secondItem="biR-o1-qd8" secondAttribute="width" id="xoA-LI-CD2"/>
-                                    <constraint firstItem="xnY-IJ-cs3" firstAttribute="centerX" secondItem="Xge-gS-fWo" secondAttribute="centerX" id="z5S-2L-joX"/>
-                                    <constraint firstItem="Xge-gS-fWo" firstAttribute="width" secondItem="ir5-vh-Ymg" secondAttribute="width" id="zYw-DF-yhh"/>
                                     <constraint firstItem="apA-Yd-UPc" firstAttribute="leading" secondItem="biR-o1-qd8" secondAttribute="trailing" id="zi5-11-0TL"/>
-                                    <constraint firstItem="ir5-vh-Ymg" firstAttribute="height" secondItem="biR-o1-qd8" secondAttribute="height" id="zoW-So-pyn"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="Zj2-sg-xSL"/>
                                         <exclude reference="FIO-gE-0ci"/>
                                         <exclude reference="Dff-kH-fUL"/>
-                                        <exclude reference="exa-S2-1qh"/>
-                                        <exclude reference="n6Z-LW-wEv"/>
-                                        <exclude reference="z5S-2L-joX"/>
-                                        <exclude reference="FLQ-3K-NhJ"/>
-                                        <exclude reference="KJu-b0-Yr3"/>
-                                        <exclude reference="TId-73-z7T"/>
-                                        <exclude reference="Y2U-iP-wa6"/>
-                                        <exclude reference="a3G-Cx-Mn0"/>
-                                        <exclude reference="zYw-DF-yhh"/>
-                                        <exclude reference="9tv-0p-owD"/>
-                                        <exclude reference="Mcz-wX-5Bw"/>
-                                        <exclude reference="fuT-XM-dn8"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -231,8 +175,6 @@
                         <outlet property="johnButton" destination="biR-o1-qd8" id="ffM-ub-HNs"/>
                         <outlet property="joyceButton" destination="xnY-IJ-cs3" id="2mv-p8-3Pg"/>
                         <outlet property="literacyButton" destination="prI-d2-t0y" id="DOi-YR-Rtn"/>
-                        <outlet property="mariaButton" destination="Xge-gS-fWo" id="Quk-i3-oIZ"/>
-                        <outlet property="normaButton" destination="ir5-vh-Ymg" id="TID-lp-Me9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Bt-OA-4tA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -427,6 +369,9 @@
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kun-38-Pk4" userLabel="Blackboard">
                                         <rect key="frame" x="0.0" y="0.0" width="176.5" height="100"/>
                                         <state key="normal" image="Blackboard"/>
+                                        <connections>
+                                            <action selector="blackBoardPressed" destination="bAT-LU-B2u" eventType="touchUpInside" id="HIc-5L-1EW"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYw-2i-wFd" userLabel="Mentors">
                                         <rect key="frame" x="191.5" y="0.0" width="177" height="100"/>
@@ -435,6 +380,9 @@
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUS-Sb-ZyU" userLabel="PaceEmail">
                                         <rect key="frame" x="383.5" y="0.0" width="176.5" height="100"/>
                                         <state key="normal" image="PaceEmail"/>
+                                        <connections>
+                                            <action selector="msOutlookPressed" destination="bAT-LU-B2u" eventType="touchUpInside" id="MTa-3L-a3e"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -493,10 +441,10 @@
             </objects>
             <point key="canvasLocation" x="1262" y="-1280"/>
         </scene>
-        <!--MapsVC-->
+        <!--Campus Map-->
         <scene sceneID="31v-6C-Plv">
             <objects>
-                <viewController id="Eiv-0j-DYo" customClass="MapsVC" customModule="SSS_Freshman_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Campus Map" id="Eiv-0j-DYo" customClass="MapsVC" customModule="SSS_Freshman_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KBp-SN-OKR"/>
                         <viewControllerLayoutGuide type="bottom" id="dkq-Dl-aVr"/>
@@ -577,6 +525,24 @@
             </objects>
             <point key="canvasLocation" x="2008" y="-1280"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="eyC-f7-Jtd">
+            <objects>
+                <viewController id="ERt-1n-SFt" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BdW-Jt-mUl"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qd7-bN-37i"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DQu-tD-edu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u8A-Il-ZbC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2681" y="-1280"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Blackboard" width="200" height="196"/>
@@ -587,9 +553,7 @@
         <image name="Hotline" width="200" height="200"/>
         <image name="Joyce" width="50" height="52"/>
         <image name="MainBG" width="387" height="501"/>
-        <image name="Maria" width="50" height="52"/>
         <image name="Mentors" width="256" height="256"/>
-        <image name="Norma" width="50" height="52"/>
         <image name="PaceEmail" width="200" height="196"/>
         <image name="Support" width="145" height="200"/>
         <image name="SupportTeam" width="373" height="34"/>

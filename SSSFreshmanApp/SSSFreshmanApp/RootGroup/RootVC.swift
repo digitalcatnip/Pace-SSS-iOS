@@ -30,9 +30,33 @@ class RootVC: UIViewController {
         super.viewWillDisappear(animated)
     }
     
-    @IBAction func supportPressed() {
-        let next = self.storyboard?.instantiateViewControllerWithIdentifier("SupportVC") as! SupportVC
-        self.presentViewController(next, animated: true, completion: nil)
+    func displayAlert(title: String, body: String) {
+        let alertController = UIAlertController(title: title, message: body, preferredStyle: .Alert)
+        let cancelAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alertController.addAction(cancelAction)
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
     
+    @IBAction func blackBoardPressed() {
+        let url = NSURL(string: "itms-apps://itunes.apple.com/us/app/blackboard-mobile-learn/id376413870")
+        if UIApplication.sharedApplication().canOpenURL(url!) {
+            UIApplication.sharedApplication().openURL(url!)
+        } else {
+            displayAlert("Failed", body: "Cannot open iTunes for Blackboard Mobile Learn")
+        }
+    }
+    
+    @IBAction func msOutlookPressed() {
+        var url = NSURL(string: "ms-outlook://")
+        if UIApplication.sharedApplication().canOpenURL(url!) {
+            UIApplication.sharedApplication().openURL(url!)
+        } else {
+            url = NSURL(string: "https://itunes.apple.com/us/app/microsoft-outlook-email-calendar/id951937596")
+            if UIApplication.sharedApplication().canOpenURL(url!) {
+                UIApplication.sharedApplication().openURL(url!)
+            } else {
+                displayAlert("Failed", body: "Cannot open MS Outlook or iTunes for MS Outlook.")
+            }
+        }
+    }
 }

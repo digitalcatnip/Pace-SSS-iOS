@@ -40,6 +40,7 @@
 	</array>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
+		<string>ms-outlook</string>
 		<string>googlechromes</string>
 		<string>comgooglemaps</string>
 	</array>
