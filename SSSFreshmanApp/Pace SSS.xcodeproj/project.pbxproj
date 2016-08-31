@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1A0E86251D67DD9800A2DC2A /* locations.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1A0E86241D67DD9800A2DC2A /* locations.txt */; };
 		1A34B5CA1D623CC500751EE6 /* WebViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A34B5C91D623CC500751EE6 /* WebViewVC.swift */; };
+		1A3CA0431D772BDE00CF147F /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1A3CA0421D772BDE00CF147F /* GoogleMaps.bundle */; };
+		1A3CA04A1D77374A00CF147F /* CourseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3CA0491D77374A00CF147F /* CourseVC.swift */; };
 		1A72848A1D67C6E20078C862 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A72847D1D67C6E20078C862 /* Accelerate.framework */; };
 		1A72848B1D67C6E20078C862 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A72847E1D67C6E20078C862 /* CoreData.framework */; };
 		1A72848C1D67C6E20078C862 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A72847F1D67C6E20078C862 /* CoreGraphics.framework */; };
@@ -28,25 +30,25 @@
 		1A7863B21D6206CA004C1DC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A7863B11D6206CA004C1DC4 /* Assets.xcassets */; };
 		1A7863B51D6206CA004C1DC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A7863B31D6206CA004C1DC4 /* LaunchScreen.storyboard */; };
 		1A7863BD1D620AD8004C1DC4 /* RootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7863BC1D620AD8004C1DC4 /* RootVC.swift */; };
+		1A8BD5791D773EDB0019A01E /* RealmModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8BD5781D773EDB0019A01E /* RealmModels.swift */; };
+		1A8BD57B1D7740490019A01E /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8BD57A1D7740490019A01E /* ModelManager.swift */; };
 		1A9336461D62A6C400B3ABFC /* important_numbers.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1A9336451D62A6C400B3ABFC /* important_numbers.txt */; };
 		1A93364A1D62A77500B3ABFC /* ImportantContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9336491D62A77500B3ABFC /* ImportantContacts.swift */; };
 		1A93364C1D62A8A200B3ABFC /* PhoneNumberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A93364B1D62A8A200B3ABFC /* PhoneNumberCell.swift */; };
+		1AA3933E1D77461C0003F72A /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AA3933D1D77461C0003F72A /* GTMOAuth2ViewTouch.xib */; };
 		1ACA4C041D621F2300DEB0C0 /* SupportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACA4C031D621F2200DEB0C0 /* SupportVC.swift */; };
 		1AE990CC1D74CB5A008E81A3 /* EmailAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE990CB1D74CB5A008E81A3 /* EmailAction.swift */; };
-		1AF526C21D6A68DF001E1B83 /* GoogleMapsBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A7284141D67C61B0078C862 /* GoogleMapsBase.framework */; };
-		1AF526C31D6A68F1001E1B83 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A72841A1D67C61B0078C862 /* GoogleMaps.framework */; };
-		1AF526C41D6A68F1001E1B83 /* GoogleMapsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A72841B1D67C61B0078C862 /* GoogleMapsCore.framework */; };
 		1AF526C61D6BEACF001E1B83 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF526C51D6BEACF001E1B83 /* Location.swift */; };
-		1AF526CB1D6BF506001E1B83 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1AF526CA1D6BF506001E1B83 /* GoogleMaps.bundle */; };
+		B6188F65EDD6A27EDE00B585 /* Pods_SSS_Freshman_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F41D070361E39CE2E093C69 /* Pods_SSS_Freshman_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1169E6AA70F784AD6AE89F7D /* Pods-SSS Freshman App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSS Freshman App.release.xcconfig"; path = "Pods/Target Support Files/Pods-SSS Freshman App/Pods-SSS Freshman App.release.xcconfig"; sourceTree = "<group>"; };
 		1A0E86241D67DD9800A2DC2A /* locations.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = locations.txt; sourceTree = "<group>"; };
 		1A34B5C91D623CC500751EE6 /* WebViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewVC.swift; sourceTree = "<group>"; };
-		1A7284141D67C61B0078C862 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMapsBase.framework; sourceTree = "<group>"; };
-		1A7284171D67C61B0078C862 /* GoogleMapsM4B.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMapsM4B.framework; sourceTree = "<group>"; };
-		1A72841A1D67C61B0078C862 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
-		1A72841B1D67C61B0078C862 /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMapsCore.framework; sourceTree = "<group>"; };
+		1A3CA0421D772BDE00CF147F /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Pods/GoogleMaps/Subspecs/Maps/Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		1A3CA0441D77349000CF147F /* GTMOAuth2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = GTMOAuth2.framework; path = "/Users/james/Library/Developer/Xcode/DerivedData/Pace_SSS-fzuygdlgzbiytqahvgtqpuhqmrtm/Build/Products/Debug-iphonesimulator/GTMOAuth2/GTMOAuth2.framework"; sourceTree = "<absolute>"; };
+		1A3CA0491D77374A00CF147F /* CourseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseVC.swift; sourceTree = "<group>"; };
 		1A72847D1D67C6E20078C862 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		1A72847E1D67C6E20078C862 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		1A72847F1D67C6E20078C862 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -68,14 +70,17 @@
 		1A7863B41D6206CA004C1DC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A7863B61D6206CA004C1DC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A7863BC1D620AD8004C1DC4 /* RootVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootVC.swift; sourceTree = "<group>"; };
+		1A8BD5781D773EDB0019A01E /* RealmModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmModels.swift; sourceTree = "<group>"; };
+		1A8BD57A1D7740490019A01E /* ModelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
 		1A9336451D62A6C400B3ABFC /* important_numbers.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = important_numbers.txt; sourceTree = "<group>"; };
 		1A9336491D62A77500B3ABFC /* ImportantContacts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportantContacts.swift; sourceTree = "<group>"; };
 		1A93364B1D62A8A200B3ABFC /* PhoneNumberCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumberCell.swift; sourceTree = "<group>"; };
+		1AA3933D1D77461C0003F72A /* GTMOAuth2ViewTouch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GTMOAuth2ViewTouch.xib; sourceTree = "<group>"; };
 		1ACA4C031D621F2200DEB0C0 /* SupportVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportVC.swift; sourceTree = "<group>"; };
 		1AE990CB1D74CB5A008E81A3 /* EmailAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailAction.swift; sourceTree = "<group>"; };
 		1AF526C51D6BEACF001E1B83 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
-		1AF526CA1D6BF506001E1B83 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = "<group>"; };
-		1AF526DE1D6E3D0C001E1B83 /* Pace SSS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pace SSS-Bridging-Header.h"; sourceTree = "<group>"; };
+		1F41D070361E39CE2E093C69 /* Pods_SSS_Freshman_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SSS_Freshman_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E81EED59DD37E69A3DD0A1E8 /* Pods-SSS Freshman App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSS Freshman App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SSS Freshman App/Pods-SSS Freshman App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,9 +88,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AF526C31D6A68F1001E1B83 /* GoogleMaps.framework in Frameworks */,
-				1AF526C41D6A68F1001E1B83 /* GoogleMapsCore.framework in Frameworks */,
-				1AF526C21D6A68DF001E1B83 /* GoogleMapsBase.framework in Frameworks */,
 				1A72848A1D67C6E20078C862 /* Accelerate.framework in Frameworks */,
 				1A72848B1D67C6E20078C862 /* CoreData.framework in Frameworks */,
 				1A72848C1D67C6E20078C862 /* CoreGraphics.framework in Frameworks */,
@@ -99,86 +101,19 @@
 				1A7284941D67C6E20078C862 /* QuartzCore.framework in Frameworks */,
 				1A7284951D67C6E20078C862 /* SystemConfiguration.framework in Frameworks */,
 				1A7284961D67C6E20078C862 /* UIKit.framework in Frameworks */,
+				B6188F65EDD6A27EDE00B585 /* Pods_SSS_Freshman_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1A7283671D67C5F10078C862 /* Dependencies */ = {
+		1A3CA0481D77361700CF147F /* Courses */ = {
 			isa = PBXGroup;
 			children = (
-				1A7283681D67C61B0078C862 /* GoogleMaps-2.0.1 */,
-				1AF526DE1D6E3D0C001E1B83 /* Pace SSS-Bridging-Header.h */,
+				1A3CA0491D77374A00CF147F /* CourseVC.swift */,
 			);
-			path = Dependencies;
-			sourceTree = "<group>";
-		};
-		1A7283681D67C61B0078C862 /* GoogleMaps-2.0.1 */ = {
-			isa = PBXGroup;
-			children = (
-				1A7284111D67C61B0078C862 /* Subspecs */,
-			);
-			path = "GoogleMaps-2.0.1";
-			sourceTree = "<group>";
-		};
-		1A7284111D67C61B0078C862 /* Subspecs */ = {
-			isa = PBXGroup;
-			children = (
-				1A7284121D67C61B0078C862 /* Base */,
-				1A7284151D67C61B0078C862 /* M4B */,
-				1A7284181D67C61B0078C862 /* Maps */,
-			);
-			path = Subspecs;
-			sourceTree = "<group>";
-		};
-		1A7284121D67C61B0078C862 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				1A7284131D67C61B0078C862 /* Frameworks */,
-			);
-			path = Base;
-			sourceTree = "<group>";
-		};
-		1A7284131D67C61B0078C862 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1A7284141D67C61B0078C862 /* GoogleMapsBase.framework */,
-			);
-			path = Frameworks;
-			sourceTree = "<group>";
-		};
-		1A7284151D67C61B0078C862 /* M4B */ = {
-			isa = PBXGroup;
-			children = (
-				1A7284161D67C61B0078C862 /* Frameworks */,
-			);
-			path = M4B;
-			sourceTree = "<group>";
-		};
-		1A7284161D67C61B0078C862 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1A7284171D67C61B0078C862 /* GoogleMapsM4B.framework */,
-			);
-			path = Frameworks;
-			sourceTree = "<group>";
-		};
-		1A7284181D67C61B0078C862 /* Maps */ = {
-			isa = PBXGroup;
-			children = (
-				1A7284191D67C61B0078C862 /* Frameworks */,
-			);
-			path = Maps;
-			sourceTree = "<group>";
-		};
-		1A7284191D67C61B0078C862 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1A72841A1D67C61B0078C862 /* GoogleMaps.framework */,
-				1A72841B1D67C61B0078C862 /* GoogleMapsCore.framework */,
-			);
-			path = Frameworks;
+			name = Courses;
 			sourceTree = "<group>";
 		};
 		1A7284971D67C6F40078C862 /* Frameworks */ = {
@@ -197,6 +132,7 @@
 				1A7284871D67C6E20078C862 /* QuartzCore.framework */,
 				1A7284881D67C6E20078C862 /* SystemConfiguration.framework */,
 				1A7284891D67C6E20078C862 /* UIKit.framework */,
+				1F41D070361E39CE2E093C69 /* Pods_SSS_Freshman_App.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -214,9 +150,12 @@
 		1A78639E1D6206C9004C1DC4 = {
 			isa = PBXGroup;
 			children = (
+				1A3CA0441D77349000CF147F /* GTMOAuth2.framework */,
+				1A3CA0421D772BDE00CF147F /* GoogleMaps.bundle */,
 				1A7284971D67C6F40078C862 /* Frameworks */,
 				1A7863A81D6206C9004C1DC4 /* Products */,
 				1A7863A91D6206C9004C1DC4 /* SSSFreshmanApp */,
+				E87E8A9955A0F4C4B9BF382D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -231,17 +170,18 @@
 		1A7863A91D6206C9004C1DC4 /* SSSFreshmanApp */ = {
 			isa = PBXGroup;
 			children = (
+				1A8BD5771D773ECF0019A01E /* Model */,
+				1A3CA0481D77361700CF147F /* Courses */,
 				1A9336481D62A76000B3ABFC /* Contacts */,
-				1A7283671D67C5F10078C862 /* Dependencies */,
 				1A7284981D67CAC00078C862 /* Map */,
 				1A7863BE1D620ADE004C1DC4 /* RootGroup */,
 				1ACA4C021D621F1100DEB0C0 /* Support */,
 				1A7863AA1D6206C9004C1DC4 /* AppDelegate.swift */,
 				1A7863B11D6206CA004C1DC4 /* Assets.xcassets */,
-				1AF526CA1D6BF506001E1B83 /* GoogleMaps.bundle */,
 				1A7863B61D6206CA004C1DC4 /* Info.plist */,
 				1A7863B31D6206CA004C1DC4 /* LaunchScreen.storyboard */,
 				1A7863AE1D6206C9004C1DC4 /* Main.storyboard */,
+				1AA3933D1D77461C0003F72A /* GTMOAuth2ViewTouch.xib */,
 			);
 			path = SSSFreshmanApp;
 			sourceTree = "<group>";
@@ -253,6 +193,15 @@
 				1AE990CB1D74CB5A008E81A3 /* EmailAction.swift */,
 			);
 			path = RootGroup;
+			sourceTree = "<group>";
+		};
+		1A8BD5771D773ECF0019A01E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1A8BD5781D773EDB0019A01E /* RealmModels.swift */,
+				1A8BD57A1D7740490019A01E /* ModelManager.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		1A9336481D62A76000B3ABFC /* Contacts */ = {
@@ -274,6 +223,15 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
+		E87E8A9955A0F4C4B9BF382D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E81EED59DD37E69A3DD0A1E8 /* Pods-SSS Freshman App.debug.xcconfig */,
+				1169E6AA70F784AD6AE89F7D /* Pods-SSS Freshman App.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -281,9 +239,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A7863B91D6206CA004C1DC4 /* Build configuration list for PBXNativeTarget "SSS Freshman App" */;
 			buildPhases = (
+				4F9EEF2F01FF747B321AD46F /* 📦 Check Pods Manifest.lock */,
 				1A7863A31D6206C9004C1DC4 /* Sources */,
 				1A7863A41D6206C9004C1DC4 /* Frameworks */,
 				1A7863A51D6206C9004C1DC4 /* Resources */,
+				EABC2B01B4BC989A50B008C1 /* 📦 Embed Pods Frameworks */,
+				F108423CB6052E92D94D455C /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -366,16 +327,65 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AA3933E1D77461C0003F72A /* GTMOAuth2ViewTouch.xib in Resources */,
 				1A7863B51D6206CA004C1DC4 /* LaunchScreen.storyboard in Resources */,
 				1A7863B21D6206CA004C1DC4 /* Assets.xcassets in Resources */,
 				1A9336461D62A6C400B3ABFC /* important_numbers.txt in Resources */,
-				1AF526CB1D6BF506001E1B83 /* GoogleMaps.bundle in Resources */,
+				1A3CA0431D772BDE00CF147F /* GoogleMaps.bundle in Resources */,
 				1A7863B01D6206C9004C1DC4 /* Main.storyboard in Resources */,
 				1A0E86251D67DD9800A2DC2A /* locations.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4F9EEF2F01FF747B321AD46F /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EABC2B01B4BC989A50B008C1 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SSS Freshman App/Pods-SSS Freshman App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F108423CB6052E92D94D455C /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SSS Freshman App/Pods-SSS Freshman App-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1A7863A31D6206C9004C1DC4 /* Sources */ = {
@@ -385,6 +395,9 @@
 				1ACA4C041D621F2300DEB0C0 /* SupportVC.swift in Sources */,
 				1A93364A1D62A77500B3ABFC /* ImportantContacts.swift in Sources */,
 				1AF526C61D6BEACF001E1B83 /* Location.swift in Sources */,
+				1A3CA04A1D77374A00CF147F /* CourseVC.swift in Sources */,
+				1A8BD5791D773EDB0019A01E /* RealmModels.swift in Sources */,
+				1A8BD57B1D7740490019A01E /* ModelManager.swift in Sources */,
 				1A34B5CA1D623CC500751EE6 /* WebViewVC.swift in Sources */,
 				1A93364C1D62A8A200B3ABFC /* PhoneNumberCell.swift in Sources */,
 				1A7863BD1D620AD8004C1DC4 /* RootVC.swift in Sources */,
@@ -503,18 +516,23 @@
 		};
 		1A7863BA1D6206CA004C1DC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E81EED59DD37E69A3DD0A1E8 /* Pods-SSS Freshman App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"SSSFreshmanApp/Dependencies/GoogleMaps-2.0.1/**",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/SSSFreshmanApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "Dependencies/**";
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.digitalplight.PaceSSS.SSS-Freshman-App";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.digitalplight.PaceSSS.SSSFreshmanApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SSSFreshmanApp/Dependencies/Pace SSS-Bridging-Header.h";
 			};
@@ -522,19 +540,24 @@
 		};
 		1A7863BB1D6206CA004C1DC4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1169E6AA70F784AD6AE89F7D /* Pods-SSS Freshman App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"SSSFreshmanApp/Dependencies/GoogleMaps-2.0.1/**",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/SSSFreshmanApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "Dependencies/**";
 				"LIBRARY_SEARCH_PATHS[arch=*]" = "";
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.digitalplight.PaceSSS.SSS-Freshman-App";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.digitalplight.PaceSSS.SSSFreshmanApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SSSFreshmanApp/Dependencies/Pace SSS-Bridging-Header.h";
 			};
