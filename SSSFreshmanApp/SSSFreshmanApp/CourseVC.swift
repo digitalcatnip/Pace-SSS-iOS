@@ -10,7 +10,7 @@ import GoogleAPIClient
 import GTMOAuth2
 import RealmSwift
 
-class CourseVC: UITableViewController {
+class CourseVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     private let kKeychainItemName = "Google Sheets API"
     private let kClientID = "69356504318-0197vfcpdlkrp6m82jc3jk8i1lvvp3b3.apps.googleusercontent.com"
     
@@ -21,6 +21,13 @@ class CourseVC: UITableViewController {
     private let service = GTLService()
     private var courses: Results<Course>?
     private var alphabets = [String]()
+    private var query = ""
+    private var campus = "All Campuses"
+    
+    @IBOutlet var campusButton: UIButton?
+    @IBOutlet var tableView: UITableView?
+    var refresher = UIRefreshControl()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +37,13 @@ class CourseVC: UITableViewController {
             clientSecret: nil) {
             service.authorizer = auth
         }
+        
+        let tableVC = UITableViewController()
+        tableVC.tableView = self.tableView
+        refresher = UIRefreshControl()
+        refresher.tintColor = UIColor.blueColor()
+        refresher.addTarget(self, action: #selector(showCourses), forControlEvents: .ValueChanged)
+        tableVC.refreshControl = refresher
         
         loadCoursesFromRealm(false)
     }
@@ -50,7 +64,7 @@ class CourseVC: UITableViewController {
     
     //MARK: UITableViewDataSource functions
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if courses != nil {
             return courses!.count
         } else {
@@ -58,23 +72,23 @@ class CourseVC: UITableViewController {
         }
     }
     
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 70.0
     }
     
-//    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCellWithIdentifier("contactCell", forIndexPath: indexPath) as! PhoneNumberCell
-//        cell.contactObj = contacts[indexPath.row]
-//        cell.configure()
-//        return cell
-//    }
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("courseCell", forIndexPath: indexPath) as! CourseCell
+        cell.courseObj = courses![indexPath.row]
+        cell.configure()
+        return cell
+    }
     
-    override func sectionIndexTitlesForTableView(tableView: UITableView) -> [String]? {
+    func sectionIndexTitlesForTableView(tableView: UITableView) -> [String]? {
         return alphabets
     }
     
     
-    override func tableView(tableView: UITableView, sectionForSectionIndexTitle title: String,
+    func tableView(tableView: UITableView, sectionForSectionIndexTitle title: String,
                             atIndex index: Int) -> Int {
         if courses != nil {
             for i in 0..<courses!.count {
@@ -90,12 +104,14 @@ class CourseVC: UITableViewController {
     }
     
     // MARK: UITableViewDelegate functions
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
     // MARK: Google Sheets API
     func showCourses() {
+        NSLog("Loading from network!")
+        refresher.beginRefreshing()
         let baseUrl = "https://sheets.googleapis.com/v4/spreadsheets"
         let spreadsheetId = "1mtFnkamBkyWKZZRO4AXdz9azL5TkRjCyHuOknvDkJMI"
         let courseRange = "Courses!A2:E"
@@ -124,6 +140,7 @@ class CourseVC: UITableViewController {
         }
         ModelManager.sharedInstance.saveModels(courses)
         loadCoursesFromRealm(true)
+        refresher.endRefreshing()
     }
     
     private func createAuthController() -> GTMOAuth2ViewControllerTouch {
@@ -167,8 +184,45 @@ class CourseVC: UITableViewController {
     }
     
     // MARK: Data Management
+    @IBAction func switchCampus() {
+        if campus == "All Campuses" {
+            campus = "New York City"
+        } else if campus == "New York City" {
+            campus = "Pleasantville"
+        } else if campus == "Pleasantville" {
+            campus = "Online"
+        } else if campus == "Online" {
+            campus = "All Campuses"
+        }
+        campusButton?.setTitle(campus, forState: .Normal)
+        loadCoursesFromRealm(true)
+    }
+    
+    func buildPredicate() -> NSPredicate? {
+        var finalQuery = ""
+        var setQuery = false
+        var pred: NSPredicate? = nil
+        if query.characters.count > 0 {
+            finalQuery = "(title CONTAINS %@ or subject_desc CONTAINS %@ or subject_course CONTAINS %@)"
+            setQuery = true
+        }
+        
+        if campus != "All Campuses" && setQuery {
+            finalQuery.appendContentsOf(" AND campus = %@")
+            pred = NSPredicate(format: finalQuery, query, query, query, campus)
+        } else if campus != "All Campuses" {
+            pred = NSPredicate(format: "campus = %@", campus)
+        } else if setQuery {
+            pred = NSPredicate(format: finalQuery, query, query, query)e
+        }
+        
+        return pred
+    }
+    
     func loadCoursesFromRealm(shouldReload: Bool) {
-        courses = ModelManager.sharedInstance.query(Course.self, queryString: nil) as! Results<Course>
+        let pred = buildPredicate()
+        courses = ModelManager.sharedInstance.query(Course.self, queryString: pred).sorted("title")
+        
         alphabets = [String]()
         var letters = [String:Int]()
         for course in courses! {
@@ -176,7 +230,33 @@ class CourseVC: UITableViewController {
         }
         alphabets = Array(letters.keys).sort()
         if shouldReload {
-            self.tableView.reloadData()
+            tableView!.reloadData()
         }
+        NSLog("Done loading from realm!")
     }
 }
+
+//MARK: Text Field Delegate
+extension CourseVC: UITextFieldDelegate {
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        if let text = textField.text {
+            let nsString = text as NSString
+            query = nsString.stringByReplacingCharactersInRange(range, withString: string).stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+            loadCoursesFromRealm(true)
+        }
+        
+        return true
+    }
+    
+    func textFieldShouldClear(textField: UITextField) -> Bool {
+        query = ""
+        loadCoursesFromRealm(true)
+        return true
+    }
+
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}
+

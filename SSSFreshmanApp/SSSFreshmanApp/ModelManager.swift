@@ -13,13 +13,13 @@ class ModelManager {
     static let sharedInstance = ModelManager()
     var realm = try! Realm()
     
-    func saveModel(model: Object) {
+    func saveModel(model: BaseObject) {
         try! realm.write {
             self.realm.add(model, update: true)
         }
     }
     
-    func saveModels(models: [Object]) {
+    func saveModels(models: [BaseObject]) {
         try! realm.write {
             for model in models {
                 self.realm.add(model, update: true)
@@ -27,7 +27,7 @@ class ModelManager {
         }
     }
     
-    func query(type: Object.Type, queryString: NSPredicate?) -> Results<Object> {
+    func query<T>(type: T.Type, queryString: NSPredicate?) -> Results<T> {
         if queryString != nil {
             return realm.objects(type).filter(queryString!)
         } else {

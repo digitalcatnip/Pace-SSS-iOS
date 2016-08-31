@@ -416,6 +416,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eX4-FH-c53" userLabel="Courses">
                                         <rect key="frame" x="385" y="0.0" width="175" height="100"/>
                                         <state key="normal" image="Courses"/>
+                                        <connections>
+                                            <segue destination="ylX-bS-QwT" kind="show" id="jst-Eb-Fkb"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -653,7 +656,7 @@
         <!--Courses-->
         <scene sceneID="Dba-on-RsU">
             <objects>
-                <viewController title="Courses" id="ylX-bS-QwT" sceneMemberID="viewController">
+                <viewController title="Courses" id="ylX-bS-QwT" customClass="CourseVC" customModule="SSS_Freshman_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UAB-ef-rdh"/>
                         <viewControllerLayoutGuide type="bottom" id="jMi-3S-SLn"/>
@@ -665,20 +668,27 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TWE-Db-L40">
                                 <rect key="frame" x="0.0" y="20" width="600" height="50"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hoK-L8-EpZ">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hoK-L8-EpZ">
                                         <rect key="frame" x="10" y="10" width="459" height="30"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="ylX-bS-QwT" id="lm8-1H-XsN"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqp-8p-iFR">
                                         <rect key="frame" x="490" y="10" width="100" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="bTH-XL-0Ow"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="TamilSangamMN-Bold" family="Tamil Sangam MN" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="TamilSangamMN-Bold" family="Tamil Sangam MN" pointSize="16"/>
                                         <state key="normal" title="All Campuses">
                                             <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="switchCampus" destination="ylX-bS-QwT" eventType="touchUpInside" id="JeC-XA-khX"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.77647058820000003" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
@@ -702,8 +712,9 @@
                                 <rect key="frame" x="0.0" y="70" width="600" height="530"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" red="0.94901960780000005" green="0.77647058820000003" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.94901960780000005" green="0.77647058820000003" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="70" id="Kh1-pQ-PNC">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="courseCell" rowHeight="70" id="Kh1-pQ-PNC" customClass="CourseCell" customModule="SSS_Freshman_App" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kh1-pQ-PNC" id="GVB-sH-Cjt">
@@ -716,13 +727,13 @@
                                                     <color key="textColor" red="0.94901960780000005" green="0.77647058820000003" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Accounting (ACC 366)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rrk-Zn-0Ff">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Accounting (ACC 366)" textAlignment="natural" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Rrk-Zn-0Ff">
                                                     <rect key="frame" x="58" y="47" width="132.5" height="14"/>
                                                     <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="14"/>
                                                     <color key="textColor" red="0.94901960780000005" green="0.77647058820000003" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pleasantville" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSW-z0-ZRq">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pleasantville" textAlignment="natural" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DSW-z0-ZRq">
                                                     <rect key="frame" x="519" y="46" width="73" height="14"/>
                                                     <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="14"/>
                                                     <color key="textColor" red="0.94901960780000005" green="0.77647058820000003" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
@@ -756,11 +767,20 @@
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="campus" destination="DSW-z0-ZRq" id="2F5-L5-oAh"/>
+                                            <outlet property="courseTitle" destination="Gsx-Ic-u5n" id="HRI-WD-E6O"/>
+                                            <outlet property="subject" destination="Rrk-Zn-0Ff" id="xPK-gU-1vb"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ylX-bS-QwT" id="AXI-Gg-0Ej"/>
+                                    <outlet property="delegate" destination="ylX-bS-QwT" id="WGR-9Q-afV"/>
+                                </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.94901960780000005" green="0.77647058820000003" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="chH-Gq-0Jf" secondAttribute="trailing" id="17e-rH-IOf"/>
                             <constraint firstItem="jMi-3S-SLn" firstAttribute="top" secondItem="chH-Gq-0Jf" secondAttribute="bottom" id="WqR-dl-IHX"/>
@@ -771,6 +791,10 @@
                             <constraint firstItem="chH-Gq-0Jf" firstAttribute="top" secondItem="TWE-Db-L40" secondAttribute="bottom" id="wSc-He-0kE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="campusButton" destination="mqp-8p-iFR" id="FUD-NO-QIP"/>
+                        <outlet property="tableView" destination="chH-Gq-0Jf" id="z68-Qw-162"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wXP-SY-JOr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -36,6 +36,7 @@
 		1A93364A1D62A77500B3ABFC /* ImportantContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9336491D62A77500B3ABFC /* ImportantContacts.swift */; };
 		1A93364C1D62A8A200B3ABFC /* PhoneNumberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A93364B1D62A8A200B3ABFC /* PhoneNumberCell.swift */; };
 		1AA3933E1D77461C0003F72A /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AA3933D1D77461C0003F72A /* GTMOAuth2ViewTouch.xib */; };
+		1AA393401D776CB00003F72A /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3933F1D776CB00003F72A /* CourseCell.swift */; };
 		1ACA4C041D621F2300DEB0C0 /* SupportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACA4C031D621F2200DEB0C0 /* SupportVC.swift */; };
 		1AE990CC1D74CB5A008E81A3 /* EmailAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE990CB1D74CB5A008E81A3 /* EmailAction.swift */; };
 		1AF526C61D6BEACF001E1B83 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF526C51D6BEACF001E1B83 /* Location.swift */; };
@@ -76,6 +77,7 @@
 		1A9336491D62A77500B3ABFC /* ImportantContacts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportantContacts.swift; sourceTree = "<group>"; };
 		1A93364B1D62A8A200B3ABFC /* PhoneNumberCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumberCell.swift; sourceTree = "<group>"; };
 		1AA3933D1D77461C0003F72A /* GTMOAuth2ViewTouch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GTMOAuth2ViewTouch.xib; sourceTree = "<group>"; };
+		1AA3933F1D776CB00003F72A /* CourseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
 		1ACA4C031D621F2200DEB0C0 /* SupportVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportVC.swift; sourceTree = "<group>"; };
 		1AE990CB1D74CB5A008E81A3 /* EmailAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailAction.swift; sourceTree = "<group>"; };
 		1AF526C51D6BEACF001E1B83 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				1A3CA0491D77374A00CF147F /* CourseVC.swift */,
+				1AA3933F1D776CB00003F72A /* CourseCell.swift */,
 			);
 			name = Courses;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				1A93364A1D62A77500B3ABFC /* ImportantContacts.swift in Sources */,
 				1AF526C61D6BEACF001E1B83 /* Location.swift in Sources */,
 				1A3CA04A1D77374A00CF147F /* CourseVC.swift in Sources */,
+				1AA393401D776CB00003F72A /* CourseCell.swift in Sources */,
 				1A8BD5791D773EDB0019A01E /* RealmModels.swift in Sources */,
 				1A8BD57B1D7740490019A01E /* ModelManager.swift in Sources */,
 				1A34B5CA1D623CC500751EE6 /* WebViewVC.swift in Sources */,
