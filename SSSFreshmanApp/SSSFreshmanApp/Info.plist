@@ -22,6 +22,7 @@
 	<string>1</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
+		<string>mailto</string>
 		<string>ms-outlook</string>
 		<string>googlechromes</string>
 		<string>comgooglemaps</string>

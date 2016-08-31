@@ -105,6 +105,10 @@ class CourseVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     // MARK: UITableViewDelegate functions
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if courses != nil && indexPath.row < courses!.count {
+            let course = courses![indexPath.row]
+            sendEmailToJonathan(course)
+        }
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
@@ -132,13 +136,34 @@ class CourseVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             return
         }
         
+        //Track the existing courses so we can delete removed entries
+        let oldCourses = ModelManager.sharedInstance.query(Course.self, queryString: nil)
+        var ocArr = [Course]()
+        for course in oldCourses {
+            ocArr.append(course)
+        }
+        
+        var hashes = [Int]()
         var courses = [Course]()
         for row in rows {
             let c = Course()
             c.initializeFromSpreadsheet(row)
             courses.append(c)
+            hashes.append(c.id)
         }
+        //Sort the IDs of the new objects, then check to see if the old objects are in the new list
+        //We'll delete any old object not in the list
+        hashes.sortInPlace()
+        var toDelete = [Course]()
+        for course in oldCourses {
+            if let _ = hashes.indexOf(course.id) {
+            } else {
+                toDelete.append(course)
+            }
+        }
+        
         ModelManager.sharedInstance.saveModels(courses)
+        ModelManager.sharedInstance.deleteModels(toDelete)
         loadCoursesFromRealm(true)
         refresher.endRefreshing()
     }
@@ -183,6 +208,16 @@ class CourseVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         presentViewController(alert, animated: true, completion: nil)
     }
     
+    //MARK: Send Email
+    func sendEmailToJonathan(course: Course) {
+        EmailAction.emailSomeone(
+            "jhooker@pace.edu",
+            message: "I would like to take \(course.title).\nCRN: \(course.subject_course)",
+            subject: "From an SSS App User",
+            presenter: self
+        )
+    }
+    
     // MARK: Data Management
     @IBAction func switchCampus() {
         if campus == "All Campuses" {
@@ -213,7 +248,7 @@ class CourseVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         } else if campus != "All Campuses" {
             pred = NSPredicate(format: "campus = %@", campus)
         } else if setQuery {
-            pred = NSPredicate(format: finalQuery, query, query, query)e
+            pred = NSPredicate(format: finalQuery, query, query, query)
         }
         
         return pred

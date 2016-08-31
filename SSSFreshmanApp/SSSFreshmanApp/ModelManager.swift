@@ -27,6 +27,14 @@ class ModelManager {
         }
     }
     
+    func deleteModels(models: [BaseObject]) {
+        try! realm.write {
+            for object in models {
+                self.realm.delete(object)
+            }
+        }
+    }
+    
     func query<T>(type: T.Type, queryString: NSPredicate?) -> Results<T> {
         if queryString != nil {
             return realm.objects(type).filter(queryString!)
