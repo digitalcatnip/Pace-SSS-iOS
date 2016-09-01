@@ -131,6 +131,10 @@ class CourseVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func displayResultWithTicket(ticket: GTLServiceTicket, finishedWithObject object : GTLObject, error: NSError?) {
+        if error != nil {
+            showAlert("Network Issue", message: "Course information may be incorrect.")
+            return
+        }
         let rows = object.JSON["values"] as! [[String]]
         if rows.isEmpty {
             NSLog("No data found.")

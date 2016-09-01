@@ -319,7 +319,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EOr-Vw-eyS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1191" y="-331"/>
+            <point key="canvasLocation" x="1262" y="-325"/>
         </scene>
         <!--HotLine-->
         <scene sceneID="zIq-Tn-YJD">
@@ -378,7 +378,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Grj-vk-9W0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1820" y="-331"/>
+            <point key="canvasLocation" x="1942" y="-331"/>
         </scene>
         <!--Tutors-->
         <scene sceneID="y4l-zq-Uon">
@@ -592,6 +592,9 @@
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYw-2i-wFd" userLabel="Mentors">
                                         <rect key="frame" x="191.5" y="0.0" width="177" height="100"/>
                                         <state key="normal" image="Mentors"/>
+                                        <connections>
+                                            <segue destination="4ab-4z-oCp" kind="show" id="ix9-2r-EYr"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUS-Sb-ZyU" userLabel="PaceEmail">
                                         <rect key="frame" x="383.5" y="0.0" width="176.5" height="100"/>
@@ -656,6 +659,83 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YC2-ON-i4l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1262" y="-1280"/>
+        </scene>
+        <!--Mentors-->
+        <scene sceneID="E0V-xs-A5N">
+            <objects>
+                <tableViewController title="Mentors" id="4ab-4z-oCp" customClass="MentorsTVC" customModule="SSS_Freshman_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="m1g-61-VtH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.94901960780000005" green="0.77647058820000003" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="separatorColor" red="0.94901960780000005" green="0.77647058820000003" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mentorCell" rowHeight="90" id="fMF-Op-FPA" customClass="MentorCell" customModule="SSS_Freshman_App" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fMF-Op-FPA" id="fmm-86-Rxp">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="89.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mentor_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Mal-36-cSZ">
+                                            <rect key="frame" x="8" y="8" width="50" height="73.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="kRk-Eh-pwt"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="sc28351n@pace.edu" textAlignment="natural" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5xo-By-pSW">
+                                            <rect key="frame" x="73" y="35" width="519" height="22"/>
+                                            <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="16"/>
+                                            <color key="textColor" red="0.94901960780000005" green="0.77647058820000003" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lubin/Quantitative Business Analysis" textAlignment="natural" lineBreakMode="middleTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Aob-hY-Ycl">
+                                            <rect key="frame" x="73" y="65" width="519" height="16"/>
+                                            <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="16"/>
+                                            <color key="textColor" red="0.94901960780000005" green="0.77647058820000003" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shivansh Chaurushia" textAlignment="natural" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1VG-eV-pKp">
+                                            <rect key="frame" x="73" y="8" width="519" height="19"/>
+                                            <fontDescription key="fontDescription" name="TamilSangamMN-Bold" family="Tamil Sangam MN" pointSize="19"/>
+                                            <color key="textColor" red="0.94901960780000005" green="0.77647058820000003" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Aob-hY-Ycl" secondAttribute="bottom" id="6XO-cL-6A1"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Aob-hY-Ycl" secondAttribute="trailing" id="AaS-3n-XCb"/>
+                                        <constraint firstItem="1VG-eV-pKp" firstAttribute="leading" secondItem="Mal-36-cSZ" secondAttribute="trailing" constant="15" id="DYV-FP-0y9"/>
+                                        <constraint firstItem="Aob-hY-Ycl" firstAttribute="top" secondItem="5xo-By-pSW" secondAttribute="bottom" constant="8" id="UvE-eD-wkV"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="5xo-By-pSW" secondAttribute="trailing" id="ahG-3k-8Ed"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Mal-36-cSZ" secondAttribute="bottom" id="cbZ-eb-Bez"/>
+                                        <constraint firstAttribute="topMargin" secondItem="1VG-eV-pKp" secondAttribute="top" id="dfh-nb-qbO"/>
+                                        <constraint firstItem="5xo-By-pSW" firstAttribute="top" secondItem="1VG-eV-pKp" secondAttribute="bottom" constant="8" id="eqi-2n-hUj"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="Mal-36-cSZ" secondAttribute="leading" id="fDv-Ri-FKg"/>
+                                        <constraint firstItem="Aob-hY-Ycl" firstAttribute="leading" secondItem="Mal-36-cSZ" secondAttribute="trailing" constant="15" id="fYj-7y-1hT"/>
+                                        <constraint firstItem="5xo-By-pSW" firstAttribute="leading" secondItem="Mal-36-cSZ" secondAttribute="trailing" constant="15" id="gYQ-ht-yrA"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="1VG-eV-pKp" secondAttribute="trailing" id="qu7-xs-GpM"/>
+                                        <constraint firstAttribute="topMargin" secondItem="Mal-36-cSZ" secondAttribute="top" id="w4U-cm-cDA"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.13725490200000001" green="0.34901960780000002" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="mentorEmail" destination="5xo-By-pSW" id="gBQ-qT-TFY"/>
+                                    <outlet property="mentorMajor" destination="Aob-hY-Ycl" id="HMT-q0-vWq"/>
+                                    <outlet property="mentorName" destination="1VG-eV-pKp" id="tYb-n4-JB5"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="4ab-4z-oCp" id="kIa-Ts-k9u"/>
+                            <outlet property="delegate" destination="4ab-4z-oCp" id="iqs-aO-ssB"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0R1-87-RVW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1942" y="-1995"/>
         </scene>
         <!--Campus Map-->
         <scene sceneID="31v-6C-Plv">
@@ -739,7 +819,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Tm-JC-ERQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2008" y="-1280"/>
+            <point key="canvasLocation" x="1942" y="-1280"/>
         </scene>
         <!--Courses-->
         <scene sceneID="Dba-on-RsU">
@@ -907,6 +987,7 @@
         <image name="bubble" width="100" height="86"/>
         <image name="cover" width="76" height="46"/>
         <image name="google_earth" width="45" height="45"/>
+        <image name="mentor_icon" width="49" height="42"/>
         <image name="tutor_icon" width="49" height="42"/>
     </resources>
     <inferredMetricsTieBreakers>

@@ -1,15 +1,16 @@
 //
-//  TutorTVC.swift
+//  MentorsTVC.swift
 //  Pace SSS
 //
 //  Created by James McCarthy on 8/31/16.
 //  Copyright © 2016 Digital Catnip. All rights reserved.
 //
+
 import GoogleAPIClient
 import GTMOAuth2
 import RealmSwift
 
-class TutorTVC: UITableViewController {
+class MentorsTVC: UITableViewController {
     private let kKeychainItemName = "Google Sheets API"
     private let kClientID = "69356504318-0197vfcpdlkrp6m82jc3jk8i1lvvp3b3.apps.googleusercontent.com"
     
@@ -18,11 +19,11 @@ class TutorTVC: UITableViewController {
     private let scopes = ["https://www.googleapis.com/auth/spreadsheets.readonly"]
     
     private let service = GTLService()
-
-    private var tutors: Results<Tutor>?
-
+    
+    private var mentors: Results<Mentor>?
+    
     var refresher = UIRefreshControl()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if let auth = GTMOAuth2ViewControllerTouch.authForGoogleFromKeychainForName(
@@ -33,20 +34,20 @@ class TutorTVC: UITableViewController {
         }
         
         refresher = UIRefreshControl()
-        refresher.tintColor = UIColor.redColor()
-        refresher.addTarget(self, action: #selector(showTutors), forControlEvents: .ValueChanged)
+        refresher.tintColor = UIColor.blueColor()
+        refresher.addTarget(self, action: #selector(showMentors), forControlEvents: .ValueChanged)
         self.refreshControl = refresher
 
-        self.navigationController?.navigationBar.tintColor = UIColor.redColor()
+        self.navigationController?.navigationBar.tintColor = UIColor.blueColor()
         
-        loadTutorsFromRealm(false)
+        loadMentorsFromRealm(false)
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         if let authorizer = service.authorizer,
             canAuth = authorizer.canAuthorize where canAuth {
-            showTutors()
+            showMentors()
         } else {
             presentViewController(
                 createAuthController(),
@@ -58,8 +59,8 @@ class TutorTVC: UITableViewController {
     
     //MARK: UITableViewDataSource functions
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if tutors != nil {
-            return tutors!.count
+        if mentors != nil {
+            return mentors!.count
         } else {
             return 0;
         }
@@ -70,51 +71,51 @@ class TutorTVC: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("tutorCell", forIndexPath: indexPath) as! TutorCell
-        cell.tutorObj = tutors![indexPath.row]
+        let cell = tableView.dequeueReusableCellWithIdentifier("mentorCell", forIndexPath: indexPath) as! MentorCell
+        cell.mentorObj = mentors![indexPath.row]
         cell.configure()
         return cell
     }
     
     // MARK: UITableViewDelegate functions
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if tutors != nil && indexPath.row < tutors!.count {
-            let tutor = tutors![indexPath.row]
-            sendEmailToTutor(tutor)
+        if mentors != nil && indexPath.row < mentors!.count {
+            let mentor = mentors![indexPath.row]
+            sendEmailToMentor(mentor)
         }
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
     //MARK: Send Email
-    func sendEmailToTutor(tutor: Tutor) {
+    func sendEmailToMentor(mentor: Mentor) {
         EmailAction.emailSomeone(
-            tutor.email,
-            message: "Hello \(tutor.first_name),\nI would like help in \(tutor.subjects).",
+            mentor.email,
+            message: "Hello \(mentor.first_name),",
             subject: "From an SSS App User",
             presenter: self
         )
     }
     
     // MARK: Google Sheets API
-    func showTutors() {
+    func showMentors() {
         NSLog("Loading from network!")
         refresher.beginRefreshing()
         let baseUrl = "https://sheets.googleapis.com/v4/spreadsheets"
-        let spreadsheetId = "1BSCxHudMSLj1tDzdxFWYBqWtxDbj_Dz4jC2ZN4JiTtU"
-        let courseRange = "tutor!A2:D"
+        let spreadsheetId = "1njPTxjoLI2c2QpQdBv11Q9YOxTRYZKxs0WEAgwg96PI"
+        let courseRange = "Mentors!A2:E"
         let url = String(format:"%@/%@/values/%@", baseUrl, spreadsheetId, courseRange)
         let params = ["majorDimension": "ROWS"]
         let fullUrl = GTLUtilities.URLWithString(url, queryParameters: params)
         service.fetchObjectWithURL(fullUrl,
                                    objectClass: GTLObject.self,
                                    delegate: self,
-                                   didFinishSelector: #selector(TutorTVC.displayResultWithTicket(_:finishedWithObject:error:))
+                                   didFinishSelector: #selector(MentorsTVC.displayResultWithTicket(_:finishedWithObject:error:))
         )
     }
     
     func displayResultWithTicket(ticket: GTLServiceTicket, finishedWithObject object : GTLObject, error: NSError?) {
         if error != nil {
-            showAlert("Network Issue", message: "Tutor information may be incorrect.")
+            showAlert("Network Issue", message: "Mentor information may be incorrect.")
             return
         }
 
@@ -125,34 +126,34 @@ class TutorTVC: UITableViewController {
         }
         
         //Track the existing courses so we can delete removed entries
-        let oldTutors = ModelManager.sharedInstance.query(Tutor.self, queryString: nil)
-        var otArr = [Tutor]()
-        for course in oldTutors {
+        let oldMentors = ModelManager.sharedInstance.query(Mentor.self, queryString: nil)
+        var otArr = [Mentor]()
+        for course in oldMentors {
             otArr.append(course)
         }
         
         var hashes = [Int]()
-        var tutors = [Tutor]()
+        var mentors = [Mentor]()
         for row in rows {
-            let t = Tutor()
+            let t = Mentor()
             t.initializeFromSpreadsheet(row)
-            tutors.append(t)
+            mentors.append(t)
             hashes.append(t.id)
         }
         //Sort the IDs of the new objects, then check to see if the old objects are in the new list
         //We'll delete any old object not in the list
         hashes.sortInPlace()
-        var toDelete = [Tutor]()
-        for tutor in otArr {
-            if let _ = hashes.indexOf(tutor.id) {
+        var toDelete = [Mentor]()
+        for mentor in otArr {
+            if let _ = hashes.indexOf(mentor.id) {
             } else {
-                toDelete.append(tutor)
+                toDelete.append(mentor)
             }
         }
         
-        ModelManager.sharedInstance.saveModels(tutors)
+        ModelManager.sharedInstance.saveModels(mentors)
         ModelManager.sharedInstance.deleteModels(toDelete)
-        loadTutorsFromRealm(true)
+        loadMentorsFromRealm(true)
         refresher.endRefreshing()
     }
     
@@ -197,8 +198,8 @@ class TutorTVC: UITableViewController {
     }
     
     // MARK: Data Management
-    func loadTutorsFromRealm(shouldReload: Bool) {
-        tutors = ModelManager.sharedInstance.query(Tutor.self, queryString: nil).sorted("first_name")
+    func loadMentorsFromRealm(shouldReload: Bool) {
+        mentors = ModelManager.sharedInstance.query(Mentor.self, queryString: nil).sorted("first_name")
         if shouldReload {
             tableView!.reloadData()
         }

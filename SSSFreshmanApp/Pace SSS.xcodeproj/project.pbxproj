@@ -40,6 +40,8 @@
 		1ACA4C041D621F2300DEB0C0 /* SupportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACA4C031D621F2200DEB0C0 /* SupportVC.swift */; };
 		1ACC656F1D778FEA006B1C0C /* TutorTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACC656E1D778FEA006B1C0C /* TutorTVC.swift */; };
 		1ACC65711D77A5DF006B1C0C /* TutorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACC65701D77A5DF006B1C0C /* TutorCell.swift */; };
+		1ACC65741D77B750006B1C0C /* MentorsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACC65731D77B750006B1C0C /* MentorsTVC.swift */; };
+		1ACC65761D77BCED006B1C0C /* MentorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACC65751D77BCED006B1C0C /* MentorCell.swift */; };
 		1AE990CC1D74CB5A008E81A3 /* EmailAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE990CB1D74CB5A008E81A3 /* EmailAction.swift */; };
 		1AF526C61D6BEACF001E1B83 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF526C51D6BEACF001E1B83 /* Location.swift */; };
 		B6188F65EDD6A27EDE00B585 /* Pods_SSS_Freshman_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F41D070361E39CE2E093C69 /* Pods_SSS_Freshman_App.framework */; };
@@ -83,6 +85,8 @@
 		1ACA4C031D621F2200DEB0C0 /* SupportVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportVC.swift; sourceTree = "<group>"; };
 		1ACC656E1D778FEA006B1C0C /* TutorTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorTVC.swift; sourceTree = "<group>"; };
 		1ACC65701D77A5DF006B1C0C /* TutorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorCell.swift; sourceTree = "<group>"; };
+		1ACC65731D77B750006B1C0C /* MentorsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentorsTVC.swift; sourceTree = "<group>"; };
+		1ACC65751D77BCED006B1C0C /* MentorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentorCell.swift; sourceTree = "<group>"; };
 		1AE990CB1D74CB5A008E81A3 /* EmailAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailAction.swift; sourceTree = "<group>"; };
 		1AF526C51D6BEACF001E1B83 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		1F41D070361E39CE2E093C69 /* Pods_SSS_Freshman_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SSS_Freshman_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -180,6 +184,7 @@
 				1A9336481D62A76000B3ABFC /* Contacts */,
 				1A3CA0481D77361700CF147F /* Courses */,
 				1A7284981D67CAC00078C862 /* Map */,
+				1ACC65721D77B722006B1C0C /* Mentors */,
 				1A8BD5771D773ECF0019A01E /* Model */,
 				1A7863BE1D620ADE004C1DC4 /* RootGroup */,
 				1ACA4C021D621F1100DEB0C0 /* Support */,
@@ -238,6 +243,15 @@
 				1ACC65701D77A5DF006B1C0C /* TutorCell.swift */,
 			);
 			name = Tutoring;
+			sourceTree = "<group>";
+		};
+		1ACC65721D77B722006B1C0C /* Mentors */ = {
+			isa = PBXGroup;
+			children = (
+				1ACC65731D77B750006B1C0C /* MentorsTVC.swift */,
+				1ACC65751D77BCED006B1C0C /* MentorCell.swift */,
+			);
+			name = Mentors;
 			sourceTree = "<group>";
 		};
 		E87E8A9955A0F4C4B9BF382D /* Pods */ = {
@@ -409,6 +423,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ACC65761D77BCED006B1C0C /* MentorCell.swift in Sources */,
+				1ACC65741D77B750006B1C0C /* MentorsTVC.swift in Sources */,
 				1ACA4C041D621F2300DEB0C0 /* SupportVC.swift in Sources */,
 				1A93364A1D62A77500B3ABFC /* ImportantContacts.swift in Sources */,
 				1AF526C61D6BEACF001E1B83 /* Location.swift in Sources */,
