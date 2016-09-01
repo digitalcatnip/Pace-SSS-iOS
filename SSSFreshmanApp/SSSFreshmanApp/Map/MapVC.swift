@@ -39,6 +39,7 @@ class MapsVC: UIViewController {
         curTileType = .Map
         mapView.mapType = kGMSTypeNormal
         tileButton.imageView?.contentMode = .ScaleAspectFit
+        self.navigationController?.navigationBar.tintColor = UIColor(red: 0, green: 122, blue: 255, alpha: 1.0)
     }
     
     //MARK: Location Handling

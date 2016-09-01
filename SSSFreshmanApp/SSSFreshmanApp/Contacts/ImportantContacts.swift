@@ -15,6 +15,8 @@ class ImportantContacts: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.tintColor = UIColor.init(red: 10/255, green: 68/255, blue: 126/255, alpha: 1.0)
+
         initializeAlphabet()
         readContacts()
         contacts.sortInPlace() { c1, c2 in

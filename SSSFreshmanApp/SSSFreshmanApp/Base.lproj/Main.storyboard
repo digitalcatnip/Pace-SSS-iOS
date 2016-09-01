@@ -26,7 +26,7 @@
         <!--Support-->
         <scene sceneID="xeX-1P-kab">
             <objects>
-                <viewController storyboardIdentifier="SupportVC" title="Support" id="MP7-kP-4TK" customClass="SupportVC" customModule="SSS_Freshman_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Support" id="MP7-kP-4TK" customClass="SupportVC" customModule="SSS_Freshman_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xia-uJ-RdU"/>
                         <viewControllerLayoutGuide type="bottom" id="Mt6-8l-dWE"/>
@@ -205,9 +205,6 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Support" id="AJg-Z1-g9f">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="KH1-Xx-oz2"/>
-                    </navigationItem>
                     <connections>
                         <outlet property="academicButton" destination="eyt-i8-GhS" id="Wbu-Yb-yBG"/>
                         <outlet property="eventsButton" destination="gLR-lk-rq3" id="acv-vx-Bqf"/>
@@ -383,6 +380,94 @@
             </objects>
             <point key="canvasLocation" x="1820" y="-331"/>
         </scene>
+        <!--Tutors-->
+        <scene sceneID="y4l-zq-Uon">
+            <objects>
+                <tableViewController title="Tutors" id="vRi-FB-Mwk" customClass="TutorTVC" customModule="SSS_Freshman_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="VNL-wc-ikJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.94901960780000005" green="0.77647058820000003" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="separatorColor" red="0.94901960780000005" green="0.77647058820000003" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.94901960780000005" green="0.77647058820000003" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tutorCell" rowHeight="90" id="dff-Rz-Swk" customClass="TutorCell" customModule="SSS_Freshman_App" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dff-Rz-Swk" id="f3r-zC-E7a">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="89.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutor_icon" translatesAutoresizingMaskIntoConstraints="NO" id="SNQ-AR-2pS">
+                                            <rect key="frame" x="8" y="8" width="50" height="73.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="556-dj-vsQ"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="252" text="Alexis Cusumano" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVa-2s-NjO">
+                                            <rect key="frame" x="63" y="8" width="528.5" height="19"/>
+                                            <fontDescription key="fontDescription" name="TamilSangamMN-Bold" family="Tamil Sangam MN" pointSize="19"/>
+                                            <color key="textColor" red="0.94901960780000005" green="0.77647058820000003" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="ac15529n@pace.edu" textAlignment="natural" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zfR-Eg-e4S">
+                                            <rect key="frame" x="63" y="33" width="529" height="26.5"/>
+                                            <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="16"/>
+                                            <color key="textColor" red="0.94901960780000005" green="0.77647058820000003" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Business/Information Technology/Math 100, 103, 104" lineBreakMode="middleTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Zd8-ET-Nlq">
+                                            <rect key="frame" x="63" y="65.5" width="529" height="16"/>
+                                            <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="16"/>
+                                            <color key="textColor" red="0.94901960780000005" green="0.77647058820000003" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="wVa-2s-NjO" firstAttribute="top" secondItem="f3r-zC-E7a" secondAttribute="topMargin" id="1i7-qQ-THk"/>
+                                        <constraint firstItem="SNQ-AR-2pS" firstAttribute="leading" secondItem="f3r-zC-E7a" secondAttribute="leadingMargin" id="8cP-b6-1QG"/>
+                                        <constraint firstItem="Zd8-ET-Nlq" firstAttribute="leading" secondItem="SNQ-AR-2pS" secondAttribute="trailing" constant="5" id="9BX-qV-XXs"/>
+                                        <constraint firstItem="Zd8-ET-Nlq" firstAttribute="top" secondItem="zfR-Eg-e4S" secondAttribute="bottom" constant="6" id="Cre-Wc-oLj"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Zd8-ET-Nlq" secondAttribute="trailing" id="H1Q-Xo-WOE"/>
+                                        <constraint firstItem="wVa-2s-NjO" firstAttribute="leading" secondItem="SNQ-AR-2pS" secondAttribute="trailing" constant="5" id="Hi7-w4-PsY"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Zd8-ET-Nlq" secondAttribute="bottom" id="SaS-FY-Fdt"/>
+                                        <constraint firstItem="Zd8-ET-Nlq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zfR-Eg-e4S" secondAttribute="trailing" constant="10" id="UbW-dt-Cp2"/>
+                                        <constraint firstItem="zfR-Eg-e4S" firstAttribute="leading" secondItem="SNQ-AR-2pS" secondAttribute="trailing" constant="5" id="azu-6l-5TQ"/>
+                                        <constraint firstItem="zfR-Eg-e4S" firstAttribute="top" secondItem="wVa-2s-NjO" secondAttribute="bottom" constant="6" id="c4Y-Qf-dQF"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="SNQ-AR-2pS" secondAttribute="bottom" id="dCV-sS-wZG"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="zfR-Eg-e4S" secondAttribute="trailing" id="dV5-BM-GAU"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="wVa-2s-NjO" secondAttribute="trailing" id="iFf-dh-7kt"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="zfR-Eg-e4S" secondAttribute="bottom" id="lbl-mx-yZc"/>
+                                        <constraint firstItem="Zd8-ET-Nlq" firstAttribute="top" secondItem="wVa-2s-NjO" secondAttribute="bottom" constant="6" id="mqw-Mu-4e8"/>
+                                        <constraint firstAttribute="topMargin" secondItem="SNQ-AR-2pS" secondAttribute="top" id="vc1-EY-a9U"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="lbl-mx-yZc"/>
+                                            <exclude reference="UbW-dt-Cp2"/>
+                                            <exclude reference="mqw-Mu-4e8"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="tutorEmail" destination="zfR-Eg-e4S" id="mmZ-ip-zHZ"/>
+                                    <outlet property="tutorName" destination="wVa-2s-NjO" id="ESa-u7-9pn"/>
+                                    <outlet property="tutorSubject" destination="Zd8-ET-Nlq" id="4bm-Xl-M7p"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="vRi-FB-Mwk" id="74Z-1I-APW"/>
+                            <outlet property="delegate" destination="vRi-FB-Mwk" id="LpC-dp-1KJ"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5RD-BS-OTS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2638" y="-331"/>
+        </scene>
         <!--RootVC-->
         <scene sceneID="Lrg-eK-vAg">
             <objects>
@@ -451,12 +536,15 @@
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeH-2X-SuI" userLabel="Tutoring">
                                         <rect key="frame" x="0.0" y="0.0" width="176.5" height="100"/>
                                         <state key="normal" image="Tutoring"/>
+                                        <connections>
+                                            <segue destination="vRi-FB-Mwk" kind="show" id="1cU-hB-byA"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLz-x3-93R" userLabel="Support">
                                         <rect key="frame" x="191.5" y="0.0" width="177" height="100"/>
                                         <state key="normal" image="Support"/>
                                         <connections>
-                                            <segue destination="MP7-kP-4TK" kind="show" id="D9Y-sB-1dp"/>
+                                            <segue destination="MP7-kP-4TK" kind="show" id="vdq-VI-bWk"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLn-Sd-Tvc" userLabel="Hotline">
@@ -710,7 +798,7 @@
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="chH-Gq-0Jf">
                                 <rect key="frame" x="0.0" y="70" width="600" height="530"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.77647058820000003" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="separatorColor" red="0.94901960780000005" green="0.77647058820000003" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.94901960780000005" green="0.77647058820000003" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
@@ -819,6 +907,7 @@
         <image name="bubble" width="100" height="86"/>
         <image name="cover" width="76" height="46"/>
         <image name="google_earth" width="45" height="45"/>
+        <image name="tutor_icon" width="49" height="42"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="nDy-fh-aOw"/>

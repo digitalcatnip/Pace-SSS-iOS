@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import MessageUI
 
 class SupportVC: UIViewController {
     
@@ -24,13 +23,10 @@ class SupportVC: UIViewController {
         setupButton(literacyButton)
         setupButton(academicButton)
         setupButton(eventsButton)
-//        setBorderRadius(johnButton)
-//        setBorderRadius(joyceButton)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBar.tintColor = UIColor.init(red: 10/255, green: 68/255, blue: 126/255, alpha: 1.0)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

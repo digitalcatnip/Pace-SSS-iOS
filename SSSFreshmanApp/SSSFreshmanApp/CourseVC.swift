@@ -38,6 +38,8 @@ class CourseVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             service.authorizer = auth
         }
         
+        self.navigationController?.navigationBar.tintColor = UIColor.blueColor()
+        
         let tableVC = UITableViewController()
         tableVC.tableView = self.tableView
         refresher = UIRefreshControl()
@@ -63,7 +65,6 @@ class CourseVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     //MARK: UITableViewDataSource functions
-
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if courses != nil {
             return courses!.count
@@ -155,7 +156,7 @@ class CourseVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         //We'll delete any old object not in the list
         hashes.sortInPlace()
         var toDelete = [Course]()
-        for course in oldCourses {
+        for course in ocArr {
             if let _ = hashes.indexOf(course.id) {
             } else {
                 toDelete.append(course)

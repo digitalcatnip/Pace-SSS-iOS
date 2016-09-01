@@ -53,3 +53,27 @@ class Course: BaseObject {
         return subject_desc
     }
 }
+
+class Tutor: BaseObject {
+    dynamic var first_name = ""
+    dynamic var last_name = ""
+    dynamic var email = ""
+    dynamic var subjects = ""
+    
+    func initializeFromSpreadsheet(values: [String]) {
+        first_name = values[0]
+        last_name = values[1]
+        email = values[2]
+        subjects = values[3]
+        
+        id = getHashForID(first_name, lastName: last_name)
+    }
+    
+    func getHashForID(firstName: String, lastName: String) -> Int {
+        return "\(firstName) \(lastName)".hash
+    }
+    
+    func fullName() -> String {
+        return "\(first_name) \(last_name)"
+    }
+}

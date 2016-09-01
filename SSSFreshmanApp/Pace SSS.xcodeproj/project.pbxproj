@@ -38,6 +38,8 @@
 		1AA3933E1D77461C0003F72A /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AA3933D1D77461C0003F72A /* GTMOAuth2ViewTouch.xib */; };
 		1AA393401D776CB00003F72A /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3933F1D776CB00003F72A /* CourseCell.swift */; };
 		1ACA4C041D621F2300DEB0C0 /* SupportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACA4C031D621F2200DEB0C0 /* SupportVC.swift */; };
+		1ACC656F1D778FEA006B1C0C /* TutorTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACC656E1D778FEA006B1C0C /* TutorTVC.swift */; };
+		1ACC65711D77A5DF006B1C0C /* TutorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACC65701D77A5DF006B1C0C /* TutorCell.swift */; };
 		1AE990CC1D74CB5A008E81A3 /* EmailAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE990CB1D74CB5A008E81A3 /* EmailAction.swift */; };
 		1AF526C61D6BEACF001E1B83 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF526C51D6BEACF001E1B83 /* Location.swift */; };
 		B6188F65EDD6A27EDE00B585 /* Pods_SSS_Freshman_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F41D070361E39CE2E093C69 /* Pods_SSS_Freshman_App.framework */; };
@@ -79,6 +81,8 @@
 		1AA3933D1D77461C0003F72A /* GTMOAuth2ViewTouch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GTMOAuth2ViewTouch.xib; sourceTree = "<group>"; };
 		1AA3933F1D776CB00003F72A /* CourseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
 		1ACA4C031D621F2200DEB0C0 /* SupportVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportVC.swift; sourceTree = "<group>"; };
+		1ACC656E1D778FEA006B1C0C /* TutorTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorTVC.swift; sourceTree = "<group>"; };
+		1ACC65701D77A5DF006B1C0C /* TutorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorCell.swift; sourceTree = "<group>"; };
 		1AE990CB1D74CB5A008E81A3 /* EmailAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailAction.swift; sourceTree = "<group>"; };
 		1AF526C51D6BEACF001E1B83 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		1F41D070361E39CE2E093C69 /* Pods_SSS_Freshman_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SSS_Freshman_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,12 +177,13 @@
 		1A7863A91D6206C9004C1DC4 /* SSSFreshmanApp */ = {
 			isa = PBXGroup;
 			children = (
-				1A8BD5771D773ECF0019A01E /* Model */,
-				1A3CA0481D77361700CF147F /* Courses */,
 				1A9336481D62A76000B3ABFC /* Contacts */,
+				1A3CA0481D77361700CF147F /* Courses */,
 				1A7284981D67CAC00078C862 /* Map */,
+				1A8BD5771D773ECF0019A01E /* Model */,
 				1A7863BE1D620ADE004C1DC4 /* RootGroup */,
 				1ACA4C021D621F1100DEB0C0 /* Support */,
+				1ACC656D1D778DCD006B1C0C /* Tutoring */,
 				1A7863AA1D6206C9004C1DC4 /* AppDelegate.swift */,
 				1A7863B11D6206CA004C1DC4 /* Assets.xcassets */,
 				1A7863B61D6206CA004C1DC4 /* Info.plist */,
@@ -224,6 +229,15 @@
 				1A34B5C91D623CC500751EE6 /* WebViewVC.swift */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		1ACC656D1D778DCD006B1C0C /* Tutoring */ = {
+			isa = PBXGroup;
+			children = (
+				1ACC656E1D778FEA006B1C0C /* TutorTVC.swift */,
+				1ACC65701D77A5DF006B1C0C /* TutorCell.swift */,
+			);
+			name = Tutoring;
 			sourceTree = "<group>";
 		};
 		E87E8A9955A0F4C4B9BF382D /* Pods */ = {
@@ -401,11 +415,13 @@
 				1A3CA04A1D77374A00CF147F /* CourseVC.swift in Sources */,
 				1AA393401D776CB00003F72A /* CourseCell.swift in Sources */,
 				1A8BD5791D773EDB0019A01E /* RealmModels.swift in Sources */,
+				1ACC656F1D778FEA006B1C0C /* TutorTVC.swift in Sources */,
 				1A8BD57B1D7740490019A01E /* ModelManager.swift in Sources */,
 				1A34B5CA1D623CC500751EE6 /* WebViewVC.swift in Sources */,
 				1A93364C1D62A8A200B3ABFC /* PhoneNumberCell.swift in Sources */,
 				1A7863BD1D620AD8004C1DC4 /* RootVC.swift in Sources */,
 				1A7863AB1D6206C9004C1DC4 /* AppDelegate.swift in Sources */,
+				1ACC65711D77A5DF006B1C0C /* TutorCell.swift in Sources */,
 				1A72849A1D67CADA0078C862 /* MapVC.swift in Sources */,
 				1AE990CC1D74CB5A008E81A3 /* EmailAction.swift in Sources */,
 			);
