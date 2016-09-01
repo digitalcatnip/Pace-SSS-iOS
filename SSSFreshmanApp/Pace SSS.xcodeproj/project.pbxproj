@@ -42,6 +42,8 @@
 		1ACC65711D77A5DF006B1C0C /* TutorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACC65701D77A5DF006B1C0C /* TutorCell.swift */; };
 		1ACC65741D77B750006B1C0C /* MentorsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACC65731D77B750006B1C0C /* MentorsTVC.swift */; };
 		1ACC65761D77BCED006B1C0C /* MentorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACC65751D77BCED006B1C0C /* MentorCell.swift */; };
+		1AE2B6C51D77DA3900560168 /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2B6C41D77DA3900560168 /* CalendarVC.swift */; };
+		1AE2B6C71D77F14D00560168 /* CalEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2B6C61D77F14D00560168 /* CalEventCell.swift */; };
 		1AE990CC1D74CB5A008E81A3 /* EmailAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE990CB1D74CB5A008E81A3 /* EmailAction.swift */; };
 		1AF526C61D6BEACF001E1B83 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF526C51D6BEACF001E1B83 /* Location.swift */; };
 		B6188F65EDD6A27EDE00B585 /* Pods_SSS_Freshman_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F41D070361E39CE2E093C69 /* Pods_SSS_Freshman_App.framework */; };
@@ -87,6 +89,9 @@
 		1ACC65701D77A5DF006B1C0C /* TutorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorCell.swift; sourceTree = "<group>"; };
 		1ACC65731D77B750006B1C0C /* MentorsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentorsTVC.swift; sourceTree = "<group>"; };
 		1ACC65751D77BCED006B1C0C /* MentorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentorCell.swift; sourceTree = "<group>"; };
+		1AE2B6C11D77D70400560168 /* Pace SSS-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Pace SSS-Bridging-Header.h"; sourceTree = "<group>"; };
+		1AE2B6C41D77DA3900560168 /* CalendarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
+		1AE2B6C61D77F14D00560168 /* CalEventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalEventCell.swift; sourceTree = "<group>"; };
 		1AE990CB1D74CB5A008E81A3 /* EmailAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailAction.swift; sourceTree = "<group>"; };
 		1AF526C51D6BEACF001E1B83 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		1F41D070361E39CE2E093C69 /* Pods_SSS_Freshman_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SSS_Freshman_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -181,6 +186,7 @@
 		1A7863A91D6206C9004C1DC4 /* SSSFreshmanApp */ = {
 			isa = PBXGroup;
 			children = (
+				1AE2B6C31D77D88000560168 /* Calendar */,
 				1A9336481D62A76000B3ABFC /* Contacts */,
 				1A3CA0481D77361700CF147F /* Courses */,
 				1A7284981D67CAC00078C862 /* Map */,
@@ -190,6 +196,7 @@
 				1ACA4C021D621F1100DEB0C0 /* Support */,
 				1ACC656D1D778DCD006B1C0C /* Tutoring */,
 				1A7863AA1D6206C9004C1DC4 /* AppDelegate.swift */,
+				1AE2B6C11D77D70400560168 /* Pace SSS-Bridging-Header.h */,
 				1A7863B11D6206CA004C1DC4 /* Assets.xcassets */,
 				1A7863B61D6206CA004C1DC4 /* Info.plist */,
 				1A7863B31D6206CA004C1DC4 /* LaunchScreen.storyboard */,
@@ -252,6 +259,15 @@
 				1ACC65751D77BCED006B1C0C /* MentorCell.swift */,
 			);
 			name = Mentors;
+			sourceTree = "<group>";
+		};
+		1AE2B6C31D77D88000560168 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				1AE2B6C41D77DA3900560168 /* CalendarVC.swift */,
+				1AE2B6C61D77F14D00560168 /* CalEventCell.swift */,
+			);
+			name = Calendar;
 			sourceTree = "<group>";
 		};
 		E87E8A9955A0F4C4B9BF382D /* Pods */ = {
@@ -430,6 +446,7 @@
 				1AF526C61D6BEACF001E1B83 /* Location.swift in Sources */,
 				1A3CA04A1D77374A00CF147F /* CourseVC.swift in Sources */,
 				1AA393401D776CB00003F72A /* CourseCell.swift in Sources */,
+				1AE2B6C71D77F14D00560168 /* CalEventCell.swift in Sources */,
 				1A8BD5791D773EDB0019A01E /* RealmModels.swift in Sources */,
 				1ACC656F1D778FEA006B1C0C /* TutorTVC.swift in Sources */,
 				1A8BD57B1D7740490019A01E /* ModelManager.swift in Sources */,
@@ -437,6 +454,7 @@
 				1A93364C1D62A8A200B3ABFC /* PhoneNumberCell.swift in Sources */,
 				1A7863BD1D620AD8004C1DC4 /* RootVC.swift in Sources */,
 				1A7863AB1D6206C9004C1DC4 /* AppDelegate.swift in Sources */,
+				1AE2B6C51D77DA3900560168 /* CalendarVC.swift in Sources */,
 				1ACC65711D77A5DF006B1C0C /* TutorCell.swift in Sources */,
 				1A72849A1D67CADA0078C862 /* MapVC.swift in Sources */,
 				1AE990CC1D74CB5A008E81A3 /* EmailAction.swift in Sources */,
@@ -556,21 +574,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"SSSFreshmanApp/Dependencies/GoogleMaps-2.0.1/**",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/SSSFreshmanApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "Dependencies/**";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.digitalplight.PaceSSS.SSSFreshmanApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "SSSFreshmanApp/Dependencies/Pace SSS-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "SSSFreshmanApp/Pace SSS-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -580,14 +593,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"SSSFreshmanApp/Dependencies/GoogleMaps-2.0.1/**",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/SSSFreshmanApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "Dependencies/**";
 				"LIBRARY_SEARCH_PATHS[arch=*]" = "";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -595,7 +603,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.digitalplight.PaceSSS.SSSFreshmanApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "SSSFreshmanApp/Dependencies/Pace SSS-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "SSSFreshmanApp/Pace SSS-Bridging-Header.h";
 			};
 			name = Release;
 		};

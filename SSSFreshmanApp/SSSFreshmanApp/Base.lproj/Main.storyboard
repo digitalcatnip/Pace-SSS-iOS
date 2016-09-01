@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -468,6 +469,148 @@
             </objects>
             <point key="canvasLocation" x="2638" y="-331"/>
         </scene>
+        <!--Event Calendar-->
+        <scene sceneID="gJG-3N-QiR">
+            <objects>
+                <viewController title="Event Calendar" id="E3S-9h-ZLO" userLabel="Event Calendar" customClass="CalendarVC" customModule="SSS_Freshman_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ijG-eM-vDK"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ks6-Ge-na4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nCD-Wh-1e5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YaC-7U-HF4" customClass="FSCalendar">
+                                <rect key="frame" x="0.0" y="20" width="600" height="300"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.77647058820000003" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectionColor">
+                                        <color key="value" red="0.12941176469999999" green="0.25882352939999997" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleDefaultColor">
+                                        <color key="value" red="0.12941176469999999" green="0.25882352939999997" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="todayColor">
+                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="todaySelectionColor">
+                                        <color key="value" red="0.12941176469999999" green="0.25882352939999997" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="allowsSelection" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="allowsMultipleSelection" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="pagingEnabled" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="scrollEnabled" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="focusOnSingleSelectedDate" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="eventSelectionColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="eventDefaultColor">
+                                        <color key="value" red="0.12941176469999999" green="0.25882352939999997" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="weekdayTextColor">
+                                        <color key="value" red="0.12941176469999999" green="0.25882352939999997" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="headerTitleColor">
+                                        <color key="value" red="0.12941176469999999" green="0.25882352939999997" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="E3S-9h-ZLO" id="ADd-w0-YZW"/>
+                                    <outlet property="delegate" destination="E3S-9h-ZLO" id="0ho-XW-HXh"/>
+                                </connections>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OFq-8h-C1N">
+                                <rect key="frame" x="0.0" y="320" width="600" height="280"/>
+                                <color key="backgroundColor" red="0.12941176469999999" green="0.25882352939999997" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="separatorColor" red="0.94901960780000005" green="0.77647058820000003" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="eventCell" rowHeight="150" id="4B8-JR-qxv" customClass="CalEventCell" customModule="SSS_Freshman_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4B8-JR-qxv" id="6gl-T2-nHe">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="149.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Google Hangouts Interview - James McCarthy and Google Staff team stuff" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="KS3-Q7-UkE">
+                                                    <rect key="frame" x="8" y="8" width="584" height="18"/>
+                                                    <fontDescription key="fontDescription" name="TamilSangamMN-Bold" family="Tamil Sangam MN" pointSize="18"/>
+                                                    <color key="textColor" red="0.94901960780000005" green="0.77647058820000003" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4:30 PM - 6:30 PM" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="exe-sm-582">
+                                                    <rect key="frame" x="8" y="34" width="584" height="16"/>
+                                                    <fontDescription key="fontDescription" name="TamilSangamMN-Bold" family="Tamil Sangam MN" pointSize="16"/>
+                                                    <color key="textColor" red="0.94901960780000005" green="0.77647058820000003" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" textAlignment="natural" lineBreakMode="middleTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mlm-h4-IcX">
+                                                    <rect key="frame" x="8" y="56" width="584" height="85.5"/>
+                                                    <string key="text">This meeting is between James and Jeff on a regular basis.  Wall of text, wall of text, Wall of text, wall of text, Wall of text, wall of text, Wall of text, wall of text,Wall of text, wall of text,Wall of text, wall of text,Wall of text, wall of text,Wall of text, wall of text,Wall of text, wall of text,Wall of text, wall of text,Wall of text, wall of text</string>
+                                                    <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="18"/>
+                                                    <color key="textColor" red="0.94901960780000005" green="0.77647058820000003" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.12941176469999999" green="0.25882352939999997" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="leadingMargin" secondItem="KS3-Q7-UkE" secondAttribute="leading" id="2pY-b8-27Q"/>
+                                                <constraint firstItem="exe-sm-582" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KS3-Q7-UkE" secondAttribute="trailing" constant="10" id="8Li-03-bgb"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="mlm-h4-IcX" secondAttribute="leading" id="IeP-Xq-k4l"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="exe-sm-582" secondAttribute="leading" id="SXo-ZY-vO4"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="mlm-h4-IcX" secondAttribute="bottom" id="Uhf-33-NnD"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="KS3-Q7-UkE" secondAttribute="trailing" id="awc-Fe-KdE"/>
+                                                <constraint firstItem="KS3-Q7-UkE" firstAttribute="top" secondItem="6gl-T2-nHe" secondAttribute="topMargin" id="d4G-gm-lmS"/>
+                                                <constraint firstItem="exe-sm-582" firstAttribute="top" secondItem="KS3-Q7-UkE" secondAttribute="bottom" constant="8" id="hAQ-WZ-Mih"/>
+                                                <constraint firstItem="exe-sm-582" firstAttribute="top" secondItem="6gl-T2-nHe" secondAttribute="topMargin" id="hrU-cz-Z14"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="exe-sm-582" secondAttribute="trailing" id="msq-3s-ocs"/>
+                                                <constraint firstItem="mlm-h4-IcX" firstAttribute="top" secondItem="KS3-Q7-UkE" secondAttribute="bottom" constant="6" id="oKa-Pw-igP"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="mlm-h4-IcX" secondAttribute="trailing" id="qgV-cX-tZe"/>
+                                                <constraint firstItem="mlm-h4-IcX" firstAttribute="top" secondItem="exe-sm-582" secondAttribute="bottom" constant="6" id="uas-iX-0KN"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="8Li-03-bgb"/>
+                                                    <exclude reference="hrU-cz-Z14"/>
+                                                    <exclude reference="oKa-Pw-igP"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.12941176469999999" green="0.25882352939999997" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="eventDesc" destination="mlm-h4-IcX" id="tb2-Z4-fV5"/>
+                                            <outlet property="eventName" destination="KS3-Q7-UkE" id="fH5-O1-oNS"/>
+                                            <outlet property="eventTime" destination="exe-sm-582" id="z9D-hX-KfS"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="E3S-9h-ZLO" id="ZSv-ZS-iwh"/>
+                                    <outlet property="delegate" destination="E3S-9h-ZLO" id="P4V-QY-iWT"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12941176469999999" green="0.25882352939999997" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="OFq-8h-C1N" firstAttribute="leading" secondItem="nCD-Wh-1e5" secondAttribute="leading" id="YMj-WG-DVK"/>
+                            <constraint firstItem="YaC-7U-HF4" firstAttribute="leading" secondItem="nCD-Wh-1e5" secondAttribute="leading" id="eOT-il-clh"/>
+                            <constraint firstAttribute="trailing" secondItem="OFq-8h-C1N" secondAttribute="trailing" id="f9g-Ji-a3b"/>
+                            <constraint firstItem="YaC-7U-HF4" firstAttribute="height" secondItem="nCD-Wh-1e5" secondAttribute="height" multiplier="0.5" id="mXD-TY-eda"/>
+                            <constraint firstItem="Ks6-Ge-na4" firstAttribute="top" secondItem="OFq-8h-C1N" secondAttribute="bottom" id="o3n-mz-en0"/>
+                            <constraint firstItem="YaC-7U-HF4" firstAttribute="top" secondItem="ijG-eM-vDK" secondAttribute="bottom" id="rHa-Ih-3sS"/>
+                            <constraint firstItem="OFq-8h-C1N" firstAttribute="top" secondItem="YaC-7U-HF4" secondAttribute="bottom" id="w4Q-gx-A35"/>
+                            <constraint firstAttribute="trailing" secondItem="YaC-7U-HF4" secondAttribute="trailing" id="zLp-6p-k1Q"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="calendarView" destination="YaC-7U-HF4" id="v12-Ai-3vL"/>
+                        <outlet property="tableView" destination="OFq-8h-C1N" id="At3-P1-m7J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GVU-CF-dsc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="530" y="-1995"/>
+        </scene>
         <!--RootVC-->
         <scene sceneID="Lrg-eK-vAg">
             <objects>
@@ -497,6 +640,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VgH-Mk-wVz" userLabel="Calendar">
                                         <rect key="frame" x="195" y="0.0" width="175" height="100"/>
                                         <state key="normal" image="Calendar"/>
+                                        <connections>
+                                            <segue destination="E3S-9h-ZLO" kind="show" id="JdB-rt-yJv"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eX4-FH-c53" userLabel="Courses">
                                         <rect key="frame" x="385" y="0.0" width="175" height="100"/>
@@ -755,7 +901,7 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search campus..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="g49-7t-kf6">
                                         <rect key="frame" x="8" y="5" width="410" height="48"/>
                                         <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                         <connections>
                                             <outlet property="delegate" destination="Eiv-0j-DYo" id="OG6-MA-zeG"/>
                                         </connections>

@@ -7,6 +7,7 @@
 //
 
 import RealmSwift
+import GoogleAPIClient
 
 class BaseObject: Object {
     dynamic var id = 0
@@ -101,5 +102,36 @@ class Mentor: BaseObject {
     
     func fullName() -> String {
         return "\(first_name) \(last_name)"
+    }
+}
+
+class CalEvent: Object {
+    dynamic var event_id = ""
+    dynamic var start_time = NSDate()
+    dynamic var end_time = NSDate()
+    dynamic var title = ""
+    dynamic var desc = "" //description
+    
+    func initializeFromGoogle(event: GTLCalendarEvent) {
+        event_id = event.identifier
+        var temp : GTLDateTime! = event.start.dateTime ?? event.start.date
+        start_time = temp.date
+        temp = event.end.dateTime ?? event.end.date
+        end_time = temp.date
+        title = event.summary
+        if event.descriptionProperty != nil {
+            desc = event.descriptionProperty
+        }
+    }
+    
+    override static func primaryKey() -> String? {
+        return "event_id"
+    }
+    
+    func eventTimeRange() -> String {
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "h:mm a"
+        formatter.timeZone = NSTimeZone.defaultTimeZone()
+        return "\(formatter.stringFromDate(start_time)) - \(formatter.stringFromDate(end_time))"
     }
 }

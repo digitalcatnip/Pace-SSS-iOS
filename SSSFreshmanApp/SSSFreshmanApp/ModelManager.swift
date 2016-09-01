@@ -13,13 +13,13 @@ class ModelManager {
     static let sharedInstance = ModelManager()
     var realm = try! Realm()
     
-    func saveModel(model: BaseObject) {
+    func saveModel(model: Object) {
         try! realm.write {
             self.realm.add(model, update: true)
         }
     }
     
-    func saveModels(models: [BaseObject]) {
+    func saveModels(models: [Object]) {
         try! realm.write {
             for model in models {
                 self.realm.add(model, update: true)
@@ -27,7 +27,7 @@ class ModelManager {
         }
     }
     
-    func deleteModels(models: [BaseObject]) {
+    func deleteModels(models: [Object]) {
         try! realm.write {
             for object in models {
                 self.realm.delete(object)

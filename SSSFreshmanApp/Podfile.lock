@@ -1,18 +1,22 @@
 PODS:
-  - GoogleAPIClient/Core (1.0.4):
+  - FSCalendar (2.3.1)
+  - GoogleAPIClient/Calendar (1.0.5):
+    - GoogleAPIClient/Core
+    - GTMSessionFetcher (~> 1.1)
+  - GoogleAPIClient/Core (1.0.5):
     - GTMSessionFetcher (~> 1.1)
   - GoogleMaps (2.0.1):
     - GoogleMaps/Maps (= 2.0.1)
   - GoogleMaps/Base (2.0.1)
   - GoogleMaps/Maps (2.0.1):
     - GoogleMaps/Base (= 2.0.1)
-  - GTMOAuth2 (1.1.1):
+  - GTMOAuth2 (1.1.2):
     - GTMSessionFetcher (~> 1.1)
-  - GTMSessionFetcher (1.1.4):
-    - GTMSessionFetcher/Full (= 1.1.4)
-  - GTMSessionFetcher/Core (1.1.4)
-  - GTMSessionFetcher/Full (1.1.4):
-    - GTMSessionFetcher/Core (= 1.1.4)
+  - GTMSessionFetcher (1.1.6):
+    - GTMSessionFetcher/Full (= 1.1.6)
+  - GTMSessionFetcher/Core (1.1.6)
+  - GTMSessionFetcher/Full (1.1.6):
+    - GTMSessionFetcher/Core (= 1.1.6)
   - Realm (1.0.2):
     - Realm/Headers (= 1.0.2)
   - Realm/Headers (1.0.2)
@@ -20,19 +24,22 @@ PODS:
     - Realm (= 1.0.2)
 
 DEPENDENCIES:
+  - FSCalendar (~> 2.3)
+  - GoogleAPIClient/Calendar (~> 1.0.2)
   - GoogleAPIClient/Core (~> 1.0.2)
   - GoogleMaps (~> 2.0)
   - GTMOAuth2 (~> 1.1.0)
   - RealmSwift (~> 1.0)
 
 SPEC CHECKSUMS:
-  GoogleAPIClient: 4dedb6af613eb7d171814c343f8a82ee5411e13b
+  FSCalendar: 6a68532ec1228e389c3c7274e3410b78702f77b6
+  GoogleAPIClient: 4a6b0b807de8b1115a2835180b25dd93dc60f1ea
   GoogleMaps: f09da64fc987c1aa29394567c3cab5a3df83c402
-  GTMOAuth2: bdb12f3e0d2110bfe585f6151230b883beb4d042
-  GTMSessionFetcher: 174bc61d5238f81f9ddb807b0b0170420f67de85
+  GTMOAuth2: 1707e2f7fe3a6d7240223c23c473ba5a2d104474
+  GTMSessionFetcher: 6aacd0ab48ddf0c3633ab2642d792abfcad1b08a
   Realm: 9d5c46a4d7d27958530a8dfc58f63a99e5c2cba3
   RealmSwift: 82f3ac5e24530143dddfde2033acc0d308f27d96
 
-PODFILE CHECKSUM: 741a129902dfcbe5ae5eb8194b2c5e4d3a123441
+PODFILE CHECKSUM: ff18eafc959c3c8d37f9766bf5e86788499c2f34
 
 COCOAPODS: 1.0.0

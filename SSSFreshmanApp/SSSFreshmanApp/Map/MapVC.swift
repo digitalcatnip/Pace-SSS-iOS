@@ -177,7 +177,7 @@ extension MapsVC: UITextFieldDelegate {
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         if let text = textField.text {
             let nsString = text as NSString
-            let newString = nsString.stringByReplacingCharactersInRange(range, withString: string)
+            let newString = nsString.stringByReplacingCharactersInRange(range, withString: string).stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
             updateMarkersForQuery(newString)
         }
         
@@ -187,6 +187,11 @@ extension MapsVC: UITextFieldDelegate {
     func textFieldShouldClear(textField: UITextField) -> Bool {
         mapView.clear()
         updateCampusMarkers()
+        return true
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
         return true
     }
 }
