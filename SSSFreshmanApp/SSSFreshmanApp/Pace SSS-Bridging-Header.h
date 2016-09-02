@@ -11,6 +11,8 @@
 
 #import <GoogleMaps/GoogleMaps.h>
 #import <FSCalendar/FSCalendar-umbrella.h>
-#import <Google/Analytics.h>
+#import "GAI.h"
+#import "GAIDictionaryBuilder.h"
+#import "GAIFields.h"
 
 #endif /* Pace_SSS_Bridging_Header_h */

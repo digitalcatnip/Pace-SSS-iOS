@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		1A0E86251D67DD9800A2DC2A /* locations.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1A0E86241D67DD9800A2DC2A /* locations.txt */; };
 		1A34B5CA1D623CC500751EE6 /* WebViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A34B5C91D623CC500751EE6 /* WebViewVC.swift */; };
+		1A3A8AA01D79DE2B00706FDD /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3A8A9F1D79DE2B00706FDD /* libsqlite3.tbd */; };
+		1A3A8AC21D79F21A00706FDD /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3A8ABF1D79F21A00706FDD /* libGoogleAnalyticsServices.a */; };
+		1A3A8AC31D79F21A00706FDD /* Readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1A3A8AC01D79F21A00706FDD /* Readme.txt */; };
+		1A3A8AC41D79F21A00706FDD /* UPGRADE.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1A3A8AC11D79F21A00706FDD /* UPGRADE.rtf */; };
 		1A3CA0431D772BDE00CF147F /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1A3CA0421D772BDE00CF147F /* GoogleMaps.bundle */; };
 		1A3CA04A1D77374A00CF147F /* CourseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3CA0491D77374A00CF147F /* CourseVC.swift */; };
 		1A4412BB1D79B78400E91E96 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A4412BA1D79B78400E91E96 /* GoogleService-Info.plist */; };
@@ -55,6 +59,20 @@
 		1169E6AA70F784AD6AE89F7D /* Pods-SSS Freshman App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSS Freshman App.release.xcconfig"; path = "Pods/Target Support Files/Pods-SSS Freshman App/Pods-SSS Freshman App.release.xcconfig"; sourceTree = "<group>"; };
 		1A0E86241D67DD9800A2DC2A /* locations.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = locations.txt; sourceTree = "<group>"; };
 		1A34B5C91D623CC500751EE6 /* WebViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewVC.swift; sourceTree = "<group>"; };
+		1A3A8A9F1D79DE2B00706FDD /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		1A3A8AB51D79F21A00706FDD /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
+		1A3A8AB61D79F21A00706FDD /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIDictionaryBuilder.h; sourceTree = "<group>"; };
+		1A3A8AB71D79F21A00706FDD /* GAIEcommerceFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceFields.h; sourceTree = "<group>"; };
+		1A3A8AB81D79F21A00706FDD /* GAIEcommerceProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceProduct.h; sourceTree = "<group>"; };
+		1A3A8AB91D79F21A00706FDD /* GAIEcommerceProductAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceProductAction.h; sourceTree = "<group>"; };
+		1A3A8ABA1D79F21A00706FDD /* GAIEcommercePromotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommercePromotion.h; sourceTree = "<group>"; };
+		1A3A8ABB1D79F21A00706FDD /* GAIFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIFields.h; sourceTree = "<group>"; };
+		1A3A8ABC1D79F21A00706FDD /* GAILogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAILogger.h; sourceTree = "<group>"; };
+		1A3A8ABD1D79F21A00706FDD /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
+		1A3A8ABE1D79F21A00706FDD /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
+		1A3A8ABF1D79F21A00706FDD /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
+		1A3A8AC01D79F21A00706FDD /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
+		1A3A8AC11D79F21A00706FDD /* UPGRADE.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = UPGRADE.rtf; sourceTree = "<group>"; };
 		1A3CA0421D772BDE00CF147F /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Pods/GoogleMaps/Subspecs/Maps/Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		1A3CA0441D77349000CF147F /* GTMOAuth2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = GTMOAuth2.framework; path = "/Users/james/Library/Developer/Xcode/DerivedData/Pace_SSS-fzuygdlgzbiytqahvgtqpuhqmrtm/Build/Products/Debug-iphonesimulator/GTMOAuth2/GTMOAuth2.framework"; sourceTree = "<absolute>"; };
 		1A3CA0491D77374A00CF147F /* CourseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseVC.swift; sourceTree = "<group>"; };
@@ -107,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A3A8AA01D79DE2B00706FDD /* libsqlite3.tbd in Frameworks */,
 				1A72848A1D67C6E20078C862 /* Accelerate.framework in Frameworks */,
 				1A72848B1D67C6E20078C862 /* CoreData.framework in Frameworks */,
 				1A72848C1D67C6E20078C862 /* CoreGraphics.framework in Frameworks */,
@@ -117,6 +136,7 @@
 				1A7284911D67C6E20078C862 /* libc++.tbd in Frameworks */,
 				1A7284921D67C6E20078C862 /* libz.tbd in Frameworks */,
 				1A7284931D67C6E20078C862 /* OpenGLES.framework in Frameworks */,
+				1A3A8AC21D79F21A00706FDD /* libGoogleAnalyticsServices.a in Frameworks */,
 				1A7284941D67C6E20078C862 /* QuartzCore.framework in Frameworks */,
 				1A7284951D67C6E20078C862 /* SystemConfiguration.framework in Frameworks */,
 				1A7284961D67C6E20078C862 /* UIKit.framework in Frameworks */,
@@ -127,6 +147,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A3A8AA11D79E7FA00706FDD /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1A3A8AB31D79F21A00706FDD /* GoogleAnalytics_3.14 */,
+			);
+			name = Libraries;
+			path = Pods/GoogleAnalytics/Libraries;
+			sourceTree = SOURCE_ROOT;
+		};
+		1A3A8AB31D79F21A00706FDD /* GoogleAnalytics_3.14 */ = {
+			isa = PBXGroup;
+			children = (
+				1A3A8AB41D79F21A00706FDD /* Includes */,
+				1A3A8ABF1D79F21A00706FDD /* libGoogleAnalyticsServices.a */,
+				1A3A8AC01D79F21A00706FDD /* Readme.txt */,
+				1A3A8AC11D79F21A00706FDD /* UPGRADE.rtf */,
+			);
+			name = GoogleAnalytics_3.14;
+			path = SSSFreshmanApp/GoogleAnalytics_3.14;
+			sourceTree = SOURCE_ROOT;
+		};
+		1A3A8AB41D79F21A00706FDD /* Includes */ = {
+			isa = PBXGroup;
+			children = (
+				1A3A8AB51D79F21A00706FDD /* GAI.h */,
+				1A3A8AB61D79F21A00706FDD /* GAIDictionaryBuilder.h */,
+				1A3A8AB71D79F21A00706FDD /* GAIEcommerceFields.h */,
+				1A3A8AB81D79F21A00706FDD /* GAIEcommerceProduct.h */,
+				1A3A8AB91D79F21A00706FDD /* GAIEcommerceProductAction.h */,
+				1A3A8ABA1D79F21A00706FDD /* GAIEcommercePromotion.h */,
+				1A3A8ABB1D79F21A00706FDD /* GAIFields.h */,
+				1A3A8ABC1D79F21A00706FDD /* GAILogger.h */,
+				1A3A8ABD1D79F21A00706FDD /* GAITrackedViewController.h */,
+				1A3A8ABE1D79F21A00706FDD /* GAITracker.h */,
+			);
+			path = Includes;
+			sourceTree = "<group>";
+		};
 		1A3CA0481D77361700CF147F /* Courses */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +210,7 @@
 		1A7284971D67C6F40078C862 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1A3A8A9F1D79DE2B00706FDD /* libsqlite3.tbd */,
 				1A72847D1D67C6E20078C862 /* Accelerate.framework */,
 				1A72847E1D67C6E20078C862 /* CoreData.framework */,
 				1A72847F1D67C6E20078C862 /* CoreGraphics.framework */,
@@ -203,6 +262,7 @@
 		1A7863A91D6206C9004C1DC4 /* SSSFreshmanApp */ = {
 			isa = PBXGroup;
 			children = (
+				1A3A8AA11D79E7FA00706FDD /* Libraries */,
 				1A4412BC1D79B91700E91E96 /* Core */,
 				1AE2B6C31D77D88000560168 /* Calendar */,
 				1A9336481D62A76000B3ABFC /* Contacts */,
@@ -393,7 +453,9 @@
 				1A7863B21D6206CA004C1DC4 /* Assets.xcassets in Resources */,
 				1A9336461D62A6C400B3ABFC /* important_numbers.txt in Resources */,
 				1A3CA0431D772BDE00CF147F /* GoogleMaps.bundle in Resources */,
+				1A3A8AC41D79F21A00706FDD /* UPGRADE.rtf in Resources */,
 				1A7863B01D6206C9004C1DC4 /* Main.storyboard in Resources */,
+				1A3A8AC31D79F21A00706FDD /* Readme.txt in Resources */,
 				1A0E86251D67DD9800A2DC2A /* locations.txt in Resources */,
 				1A4412BB1D79B78400E91E96 /* GoogleService-Info.plist in Resources */,
 			);
@@ -588,12 +650,21 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E81EED59DD37E69A3DD0A1E8 /* Pods-SSS Freshman App.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SSSFreshmanApp/GoogleAnalytics_3.14",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/SSSFreshmanApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SSSFreshmanApp/GoogleAnalytics_3.14",
+				);
 				OTHER_LDFLAGS = (
+					"-L$(PROJECT_DIR)/SSSFreshmanApp/GoogleAnalytics_3.14",
 					"$(inherited)",
 					"-ObjC",
 				);
@@ -607,13 +678,22 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1169E6AA70F784AD6AE89F7D /* Pods-SSS Freshman App.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SSSFreshmanApp/GoogleAnalytics_3.14",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/SSSFreshmanApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SSSFreshmanApp/GoogleAnalytics_3.14",
+				);
 				"LIBRARY_SEARCH_PATHS[arch=*]" = "";
 				OTHER_LDFLAGS = (
+					"-L$(PROJECT_DIR)/SSSFreshmanApp/GoogleAnalytics_3.14",
 					"$(inherited)",
 					"-ObjC",
 				);

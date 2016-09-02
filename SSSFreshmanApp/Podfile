@@ -8,5 +8,4 @@ target 'SSS Freshman App' do
     pod 'RealmSwift', '~> 1.0'
     pod 'GoogleAPIClient/Calendar', '~> 1.0.2'
     pod 'FSCalendar', '~> 2.3'
-    pod 'Google/Analytics'
 end

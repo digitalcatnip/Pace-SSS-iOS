@@ -8,9 +8,7 @@
 
 func initializeAnalytics() {
     // Configure tracker from GoogleService-Info.plist.
-    var configureError:NSError?
-    GGLContext.sharedInstance().configureWithError(&configureError)
-    assert(configureError == nil, "Error configuring Google services: \(configureError)")
+    GAI.sharedInstance().trackerWithTrackingId("UA-82744810-2")
     
     // Optional: configure GAI options.
     let gai = GAI.sharedInstance()
