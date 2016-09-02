@@ -302,13 +302,16 @@ extension CourseVC: UITextFieldDelegate {
     
     func textFieldShouldClear(textField: UITextField) -> Bool {
         query = ""
+        registerButtonAction("Courses", action: "Clear Search", label: "")
         loadCoursesFromRealm(true)
         return true
     }
 
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         if let text = textField.text {
-            registerButtonAction("Courses", action: "Search Course", label: "\(text) - \(campus)")
+            if text.characters.count > 0 {
+                registerButtonAction("Courses", action: "Search Course", label: "\(text) - \(campus)")
+            }
         }
         textField.resignFirstResponder()
         return true

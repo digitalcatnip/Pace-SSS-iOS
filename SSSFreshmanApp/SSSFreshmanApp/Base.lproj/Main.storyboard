@@ -980,10 +980,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TWE-Db-L40">
-                                <rect key="frame" x="0.0" y="20" width="320" height="50"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="60"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hoK-L8-EpZ">
-                                        <rect key="frame" x="10" y="10" width="179" height="30"/>
+                                        <rect key="frame" x="10" y="10" width="179" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="DbU-HR-R6L"/>
+                                        </constraints>
                                         <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
@@ -992,7 +995,7 @@
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqp-8p-iFR">
-                                        <rect key="frame" x="210" y="10" width="100" height="30"/>
+                                        <rect key="frame" x="210" y="10" width="100" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="bTH-XL-0Ow"/>
                                         </constraints>
@@ -1023,7 +1026,7 @@
                                 </variation>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="chH-Gq-0Jf">
-                                <rect key="frame" x="0.0" y="70" width="320" height="498"/>
+                                <rect key="frame" x="0.0" y="80" width="320" height="488"/>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.77647058820000003" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="separatorColor" red="0.94901960780000005" green="0.77647058820000003" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.94901960780000005" green="0.77647058820000003" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
@@ -1036,19 +1039,19 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Mentored Lab Class Semester 2" textAlignment="natural" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Gsx-Ic-u5n">
-                                                    <rect key="frame" x="63" y="8" width="249" height="40"/>
+                                                    <rect key="frame" x="63" y="8" width="249" height="39"/>
                                                     <fontDescription key="fontDescription" name="TamilSangamMN-Bold" family="Tamil Sangam MN" pointSize="19"/>
                                                     <color key="textColor" red="0.94901960780000005" green="0.77647058820000003" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Computer Information Systems (CIS 122)" textAlignment="natural" lineBreakMode="middleTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Rrk-Zn-0Ff">
-                                                    <rect key="frame" x="63" y="53.5" width="131.5" height="28"/>
+                                                    <rect key="frame" x="63" y="53" width="131.5" height="28"/>
                                                     <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="14"/>
                                                     <color key="textColor" red="0.94901960780000005" green="0.77647058820000003" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Pleasantville" textAlignment="natural" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DSW-z0-ZRq">
-                                                    <rect key="frame" x="239" y="52.5" width="73" height="14"/>
+                                                    <rect key="frame" x="239" y="52" width="73" height="14"/>
                                                     <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="14"/>
                                                     <color key="textColor" red="0.94901960780000005" green="0.77647058820000003" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>

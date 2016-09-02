@@ -192,6 +192,7 @@ extension MapsVC: UITextFieldDelegate {
     }
     
     func textFieldShouldClear(textField: UITextField) -> Bool {
+        registerButtonAction("Maps", action: "Clear Search", label: "")
         mapView.clear()
         updateCampusMarkers()
         return true
@@ -199,7 +200,9 @@ extension MapsVC: UITextFieldDelegate {
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         if let text = textField.text {
-            registerButtonAction("Maps", action: "Performed Search", label: text)
+            if text.characters.count > 0 {
+                registerButtonAction("Maps", action: "Performed Search", label: text)
+            }
         }
         textField.resignFirstResponder()
         return true
