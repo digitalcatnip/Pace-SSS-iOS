@@ -92,7 +92,7 @@ class MentorsTVC: UITableViewController {
     
     //MARK: Send Email
     func sendEmailToMentor(mentor: Mentor) {
-        registerButtonAction("Mentors", action: "Email Mentor", label: mentor.last_name)
+        registerButtonAction("Mentors", action: "Email Mentor", label: mentor.fullName())
         EmailAction.emailSomeone(
             mentor.email,
             message: "Hello \(mentor.first_name),",

@@ -118,10 +118,11 @@ class MapsVC: UIViewController {
         if(query.characters.count < 1) {
             updateCampusMarkers()
         } else {
+            let search = query.lowercaseString
             let keys = getKeysForCampus(curCampus)
             for key in keys {
                 if let loc = locations[key] {
-                    if loc.title.containsString(query) || loc.descrip.containsString(query) {
+                    if loc.title.lowercaseString.containsString(search) || loc.descrip.lowercaseString.containsString(search) {
                         loc.addToMap(mapView)
                     }
                 }
@@ -157,6 +158,7 @@ class MapsVC: UIViewController {
         } else if curCampus == "NYC" {
             curCampus = "PLV"
         }
+        registerButtonAction("Maps", action: "Switch Campus", label: curCampus)
         
         campusChanged(true)
     }
@@ -167,11 +169,12 @@ class MapsVC: UIViewController {
             curTileType = .Map
             mapView.mapType = kGMSTypeNormal
             tileButton.setImage(tileEarthImage, forState: .Normal)
-            
+            registerButtonAction("Maps", action: "Switch Tile", label: "Map")
         default:
             curTileType = .Earth
             mapView.mapType = kGMSTypeSatellite
             tileButton.setImage(tileMapImage, forState: .Normal)
+            registerButtonAction("Maps", action: "Switch Tile", label: "Earth")
         }
     }
 }
@@ -195,6 +198,9 @@ extension MapsVC: UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if let text = textField.text {
+            registerButtonAction("Maps", action: "Performed Search", label: text)
+        }
         textField.resignFirstResponder()
         return true
     }
@@ -202,7 +208,9 @@ extension MapsVC: UITextFieldDelegate {
 
 extension MapsVC: GMSMapViewDelegate {
     func mapView(mapView: GMSMapView, didTapMarker marker: GMSMarker) -> Bool {
-        registerButtonAction("Maps", action: "Tapped Marker", label: marker.title!)
+        if let title = marker.title {
+            registerButtonAction("Maps", action: "Tapped Marker", label: title)
+        }
         return false
     }
 }
@@ -220,6 +228,7 @@ extension MapsVC: CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first {
             updateCampusWithLocation(location)
+            registerButtonAction("Maps", action: "Initial Campus", label: curCampus)
             locationManager.stopUpdatingLocation()
         }
     }

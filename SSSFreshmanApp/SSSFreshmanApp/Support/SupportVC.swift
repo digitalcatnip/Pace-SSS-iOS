@@ -39,6 +39,7 @@ class SupportVC: UIViewController {
             if let destinationVC = segue.destinationViewController as? WebViewVC {
                 destinationVC.webAddress = "https://drive.google.com/file/d/0B35gGagDNpQBUVdMSy1HTTF0WWM/view?usp=sharing"
                 destinationVC.titleString = "Academic Services"
+                registerButtonAction("SSS Webpage", action: "View Page", label: "Academic Services")
             }
         }
         else if segue.identifier == "financialSegue"
@@ -46,6 +47,7 @@ class SupportVC: UIViewController {
             if let destinationVC = segue.destinationViewController as? WebViewVC {
                 destinationVC.webAddress = "https://drive.google.com/file/d/0B35gGagDNpQBTDFEc0JJU2dmWFE/view?usp=sharing"
                 destinationVC.titleString = "Financial Counseling"
+                registerButtonAction("SSS Webpage", action: "View Page", label: "Financial Counseling")
             }
         }
         else if segue.identifier == "culturalSegue"
@@ -53,6 +55,7 @@ class SupportVC: UIViewController {
             if let destinationVC = segue.destinationViewController as? WebViewVC {
                 destinationVC.webAddress = "http://www.pace.edu/dyson/centers/center-for-undergraduate-research-experiences/student-support-services#socialandculturalevents"
                 destinationVC.titleString = "Cultural Events"
+                registerButtonAction("SSS Webpage", action: "View Page", label: "Cultural Events")
             }
         }
     }
@@ -72,12 +75,12 @@ class SupportVC: UIViewController {
     }
      
     @IBAction func emailJohn() {
-        registerButtonAction("Support", action: "Send Email", label: "Email Jonathan")
+        registerButtonAction("Support", action: "Send Email", label: "Jonathan Hooker")
         EmailAction.emailSomeone("jhooker@pace.edu", message: "Hello Mr. Hooker,", subject: "From an SSS app user", presenter: self);
     }
     
     @IBAction func emailJoyce() {
-        registerButtonAction("Support", action: "Send Email", label: "Email Joyce")
+        registerButtonAction("Support", action: "Send Email", label: "Joyce Lau")
         EmailAction.emailSomeone("jlau@pace.edu", message: "Hello Ms. Lau,", subject: "From an SSS app user", presenter: self)
     }
 }

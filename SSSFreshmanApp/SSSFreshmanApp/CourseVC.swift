@@ -78,7 +78,13 @@ class CourseVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 70.0
+        if courses != nil {
+            let course = courses![indexPath.row]
+            if course.fullSubject().characters.count < 25 {
+                return 70.0
+            }
+        }
+        return 90.0
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -239,6 +245,7 @@ class CourseVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         } else if campus == "Online" {
             campus = "All Campuses"
         }
+        registerButtonAction("Courses", action: "Switch Campus", label: campus)
         campusButton?.setTitle(campus, forState: .Normal)
         loadCoursesFromRealm(true)
     }
@@ -248,7 +255,7 @@ class CourseVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         var setQuery = false
         var pred: NSPredicate? = nil
         if query.characters.count > 0 {
-            finalQuery = "(title CONTAINS %@ or subject_desc CONTAINS %@ or subject_course CONTAINS %@)"
+            finalQuery = "(title CONTAINS[c] %@ or subject_desc CONTAINS[c] %@ or subject_course CONTAINS[c] %@)"
             setQuery = true
         }
         
@@ -300,6 +307,9 @@ extension CourseVC: UITextFieldDelegate {
     }
 
     func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if let text = textField.text {
+            registerButtonAction("Courses", action: "Search Course", label: "\(text) - \(campus)")
+        }
         textField.resignFirstResponder()
         return true
     }
