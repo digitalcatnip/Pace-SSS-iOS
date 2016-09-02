@@ -57,6 +57,10 @@ class MentorsTVC: UITableViewController {
         }
     }
     
+    override func viewDidAppear(animated: Bool) {
+        registerScreen("MentorScreen")
+    }
+    
     //MARK: UITableViewDataSource functions
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if mentors != nil {
@@ -116,6 +120,7 @@ class MentorsTVC: UITableViewController {
     func displayResultWithTicket(ticket: GTLServiceTicket, finishedWithObject object : GTLObject, error: NSError?) {
         if error != nil {
             showAlert("Network Issue", message: "Mentor information may be incorrect.")
+            NSLog("Got network error: %@", error!.localizedDescription)
             return
         }
 

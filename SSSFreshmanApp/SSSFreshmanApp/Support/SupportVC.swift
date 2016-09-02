@@ -29,6 +29,10 @@ class SupportVC: UIViewController {
         self.navigationController?.navigationBar.tintColor = UIColor.init(red: 10/255, green: 68/255, blue: 126/255, alpha: 1.0)
     }
     
+    override func viewDidAppear(animated: Bool) {
+        registerScreen("Financial Literacy Screen")
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "academicSegue"
         {

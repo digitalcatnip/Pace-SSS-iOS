@@ -42,6 +42,10 @@ class WebViewVC: UIViewController {
         }
     }
     
+    override func viewDidAppear(animated: Bool) {
+        registerScreen("SSS Webpage")
+    }
+    
     @IBAction func emailJohn() {
         EmailAction.emailSomeone("jhooker@pace.edu", message: "Hello Mr. Hooker,", subject: "From an SSS app user", presenter: self);
     }

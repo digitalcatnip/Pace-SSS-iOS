@@ -56,6 +56,10 @@ class TutorTVC: UITableViewController {
         }
     }
     
+    override func viewDidAppear(animated: Bool) {
+        registerScreen("TutorScreen")
+    }
+    
     //MARK: UITableViewDataSource functions
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tutors != nil {

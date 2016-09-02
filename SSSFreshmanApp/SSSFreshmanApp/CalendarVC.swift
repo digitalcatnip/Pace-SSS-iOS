@@ -41,6 +41,7 @@ class CalendarVC: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
+        registerScreen("Calendar")
         loadAllEventsFromRealm(true)
         loadTodaysEventsFromRealm(true)
         if let authorizer = service.authorizer,

@@ -24,6 +24,10 @@ class ImportantContacts: UITableViewController {
         }
     }
     
+    override func viewDidAppear(animated: Bool) {
+        registerScreen("HotlineScreen")
+    }
+    
     //MARK: UITableViewDataSource functions
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

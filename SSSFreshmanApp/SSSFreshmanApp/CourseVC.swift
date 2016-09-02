@@ -64,6 +64,10 @@ class CourseVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    override func viewDidAppear(animated: Bool) {
+        registerScreen("CoursesScreen")
+    }
+    
     //MARK: UITableViewDataSource functions
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if courses != nil {
