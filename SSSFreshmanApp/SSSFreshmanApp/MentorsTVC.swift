@@ -38,7 +38,7 @@ class MentorsTVC: UITableViewController {
         refresher.addTarget(self, action: #selector(showMentors), forControlEvents: .ValueChanged)
         self.refreshControl = refresher
 
-        self.navigationController?.navigationBar.tintColor = UIColor.blueColor()
+        self.navigationController?.navigationBar.tintColor = UIColor(red: 39/255, green: 85/255, blue: 235/255, alpha: 1.0)
         
         loadMentorsFromRealm(false)
     }
