@@ -91,6 +91,7 @@ class TutorTVC: UITableViewController {
     
     //MARK: Send Email
     func sendEmailToTutor(tutor: Tutor) {
+        registerButtonAction("Tutors", action: "Email Tutor", label: tutor.fullName())
         EmailAction.emailSomeone(
             tutor.email,
             message: "Hello \(tutor.first_name),\nI would like help in \(tutor.subjects).",

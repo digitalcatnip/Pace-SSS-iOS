@@ -72,10 +72,12 @@ class SupportVC: UIViewController {
     }
      
     @IBAction func emailJohn() {
+        registerButtonAction("Support", action: "Send Email", label: "Email Jonathan")
         EmailAction.emailSomeone("jhooker@pace.edu", message: "Hello Mr. Hooker,", subject: "From an SSS app user", presenter: self);
     }
     
     @IBAction func emailJoyce() {
+        registerButtonAction("Support", action: "Send Email", label: "Email Joyce")
         EmailAction.emailSomeone("jlau@pace.edu", message: "Hello Ms. Lau,", subject: "From an SSS app user", presenter: self)
     }
 }

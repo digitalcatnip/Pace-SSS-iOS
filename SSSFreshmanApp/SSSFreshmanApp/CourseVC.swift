@@ -219,6 +219,7 @@ class CourseVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     //MARK: Send Email
     func sendEmailToJonathan(course: Course) {
+        registerButtonAction("Courses", action: "Send Email", label: course.subject_course)
         EmailAction.emailSomeone(
             "jhooker@pace.edu",
             message: "I would like to take \(course.title).\nCRN: \(course.subject_course)",

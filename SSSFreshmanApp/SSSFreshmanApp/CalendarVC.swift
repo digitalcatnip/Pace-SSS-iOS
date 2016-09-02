@@ -172,6 +172,9 @@ class CalendarVC: UIViewController {
             if todayEvents!.count > 0 {
                 self.tableView!.hidden = false
                 self.tableView!.reloadData()
+                todayEvents?.forEach() { event in
+                    registerButtonAction("Calendar", action: "Event Viewed", label: event.title)
+                }
             } else {
                 self.tableView!.hidden = true
             }

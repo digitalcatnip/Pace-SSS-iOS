@@ -140,6 +140,7 @@ class Contact {
     }
     
     func dialNumber() {
+        registerButtonAction("Hotline", action: "Dial Number", label: contactName)
         if let url = NSURL(string: "tel://\(phoneNumber)") {
             UIApplication.sharedApplication().openURL(url)
         }

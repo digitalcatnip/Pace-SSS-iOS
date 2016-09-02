@@ -200,6 +200,13 @@ extension MapsVC: UITextFieldDelegate {
     }
 }
 
+extension MapsVC: GMSMapViewDelegate {
+    func mapView(mapView: GMSMapView, didTapMarker marker: GMSMarker) -> Bool {
+        registerButtonAction("Maps", action: "Tapped Marker", label: marker.title!)
+        return false
+    }
+}
+
 //MARK: Location Manager Delegate
 extension MapsVC: CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
