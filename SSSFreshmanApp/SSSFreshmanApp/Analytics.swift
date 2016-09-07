@@ -9,6 +9,7 @@
 func initializeAnalytics() {
     // Configure tracker from GoogleService-Info.plist.
     GAI.sharedInstance().trackerWithTrackingId("UA-82744810-2")
+//    GAI.sharedInstance().trackerWithTrackingId("UA-82744810-1")
     
     // Optional: configure GAI options.
     let gai = GAI.sharedInstance()

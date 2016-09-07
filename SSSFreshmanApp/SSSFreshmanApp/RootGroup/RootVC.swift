@@ -31,7 +31,16 @@ class RootVC: UIViewController {
         self.presentViewController(alertController, animated: true, completion: nil)
     }
     
-    @IBAction func blackBoardPressed() {
+    func displayPrompt(title: String, body: String, action: ((UIAlertAction)->(Void))?) {
+        let alertController = UIAlertController(title: title, message: body, preferredStyle: .Alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+        let proceedAction = UIAlertAction(title: "OK", style: .Default, handler: action)
+        alertController.addAction(proceedAction)
+        alertController.addAction(cancelAction)
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    func goToBlackboard(action: UIAlertAction) {
         let url = NSURL(string: "itms-apps://itunes.apple.com/us/app/blackboard-mobile-learn/id376413870")
         if UIApplication.sharedApplication().canOpenURL(url!) {
             UIApplication.sharedApplication().openURL(url!)
@@ -40,17 +49,27 @@ class RootVC: UIViewController {
         }
     }
     
-    @IBAction func msOutlookPressed() {
-        var url = NSURL(string: "ms-outlook://")
+    func goToOutlook(action: UIAlertAction) {
+        let url = NSURL(string: "https://itunes.apple.com/us/app/microsoft-outlook-email-calendar/id951937596")
         if UIApplication.sharedApplication().canOpenURL(url!) {
             UIApplication.sharedApplication().openURL(url!)
         } else {
-            url = NSURL(string: "https://itunes.apple.com/us/app/microsoft-outlook-email-calendar/id951937596")
-            if UIApplication.sharedApplication().canOpenURL(url!) {
-                UIApplication.sharedApplication().openURL(url!)
-            } else {
-                displayAlert("Failed", body: "Cannot open MS Outlook or iTunes for MS Outlook.")
-            }
+            displayAlert("Failed", body: "Cannot open MS Outlook or iTunes for MS Outlook.")
+        }
+    }
+    
+    @IBAction func blackBoardPressed() {
+        registerButtonAction("StartScreen", action: "Go To App", label: "Blackboard")
+        displayPrompt("BlackBoard", body: "Go to App Store to open / download Blackboard?", action: goToBlackboard)
+    }
+    
+    @IBAction func msOutlookPressed() {
+        registerButtonAction("StartScreen", action: "Go To App", label: "Outlook")
+        let url = NSURL(string: "ms-outlook://")
+        if UIApplication.sharedApplication().canOpenURL(url!) {
+            UIApplication.sharedApplication().openURL(url!)
+        } else {
+            displayPrompt("Outlook", body: "Go to App Store to download Outlook?", action: goToOutlook)
         }
     }
 }

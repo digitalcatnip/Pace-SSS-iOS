@@ -19,7 +19,7 @@ class EmailAction {
         if UIApplication.sharedApplication().canOpenURL(url!) {
             UIApplication.sharedApplication().openURL(url!)
         } else {
-            url = NSURL(string: "mailto:?to=\(toEmail!)?subject=\(subject!)&body=\(body!)")
+            url = NSURL(string: "mailto:?to=\(toEmail!)&subject=\(subject!)&body=\(body!)")
             if UIApplication.sharedApplication().canOpenURL(url!) {
                 UIApplication.sharedApplication().openURL(url!)
             } else {
