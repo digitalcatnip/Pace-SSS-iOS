@@ -11,8 +11,8 @@ import GTMOAuth2
 import RealmSwift
 
 class CourseVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    private let kKeychainItemName = "Google Sheets API"
-    private let kClientID = "1071382956425-pkjhpb11tkd9bn4bapln4uolidlml5b1.apps.googleusercontent.com"
+    private let kKeychainItemName = "SSS Freshman App"
+    private let kClientID = "1071382956425-khatsf83p2hm5oihev02j2v36q5je8r8.apps.googleusercontent.com"
     
     // If modifying these scopes, delete your previously saved credentials by
     // resetting the iOS simulator or uninstall the app.
@@ -142,6 +142,7 @@ class CourseVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func displayResultWithTicket(ticket: GTLServiceTicket, finishedWithObject object : GTLObject, error: NSError?) {
         if error != nil {
+            NSLog("Failed to fetch courses: \(error!.localizedDescription)")
             showAlert("Network Issue", message: "Course information may be incorrect.")
             return
         }

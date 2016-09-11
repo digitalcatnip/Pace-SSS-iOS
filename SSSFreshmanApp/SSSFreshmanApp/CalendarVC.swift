@@ -10,8 +10,8 @@ import GTMOAuth2
 import RealmSwift
 
 class CalendarVC: UIViewController {
-    private let kKeychainItemName = "Google Calendar API"
-    private let kClientID = "1071382956425-pkjhpb11tkd9bn4bapln4uolidlml5b1.apps.googleusercontent.com"
+    private let kKeychainItemName = "SSS Freshman App Cal"
+    private let kClientID = "1071382956425-khatsf83p2hm5oihev02j2v36q5je8r8.apps.googleusercontent.com"
     private let kCalendarID = "kd0jfkn4qikqq9fajturdappqc@group.calendar.google.com";  //SSS cal ID
 
     

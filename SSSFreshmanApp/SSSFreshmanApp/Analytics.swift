@@ -14,8 +14,7 @@ func initializeAnalytics() {
     // Optional: configure GAI options.
     let gai = GAI.sharedInstance()
     gai.trackUncaughtExceptions = true  // report uncaught exceptions
-    gai.logger.logLevel = GAILogLevel.Verbose  // remove before app release
-    gai.dryRun = true
+    gai.logger.logLevel = GAILogLevel.Error  // remove before app release
 }
 
 func registerScreen(screenName: String) {

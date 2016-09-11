@@ -111,6 +111,7 @@
 		1ACC65701D77A5DF006B1C0C /* TutorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorCell.swift; sourceTree = "<group>"; };
 		1ACC65731D77B750006B1C0C /* MentorsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentorsTVC.swift; sourceTree = "<group>"; };
 		1ACC65751D77BCED006B1C0C /* MentorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentorCell.swift; sourceTree = "<group>"; };
+		1AD3C5F61D85C6FC002A72E0 /* GTMOAuth2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GTMOAuth2.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Pace_SSS-fzuygdlgzbiytqahvgtqpuhqmrtm/Build/Products/Release-iphonesimulator/GTMOAuth2/GTMOAuth2.framework"; sourceTree = "<group>"; };
 		1AE2B6C11D77D70400560168 /* Pace SSS-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Pace SSS-Bridging-Header.h"; sourceTree = "<group>"; };
 		1AE2B6C41D77DA3900560168 /* CalendarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
 		1AE2B6C61D77F14D00560168 /* CalEventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalEventCell.swift; sourceTree = "<group>"; };
@@ -210,6 +211,7 @@
 		1A7284971D67C6F40078C862 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1AD3C5F61D85C6FC002A72E0 /* GTMOAuth2.framework */,
 				1A3A8A9F1D79DE2B00706FDD /* libsqlite3.tbd */,
 				1A72847D1D67C6E20078C862 /* Accelerate.framework */,
 				1A72847E1D67C6E20078C862 /* CoreData.framework */,
@@ -392,7 +394,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1A7863A21D6206C9004C1DC4 /* Build configuration list for PBXProject "MyPace2" */;
+			buildConfigurationList = 1A7863A21D6206C9004C1DC4 /* Build configuration list for PBXProject "Pace SSS" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -669,7 +671,7 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.pace.sss.freshman-app";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.pace.sss.freshmanapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SSSFreshmanApp/Pace SSS-Bridging-Header.h";
 			};
@@ -699,7 +701,7 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.pace.sss.freshman-app";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.pace.sss.freshmanapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SSSFreshmanApp/Pace SSS-Bridging-Header.h";
 			};
@@ -708,7 +710,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1A7863A21D6206C9004C1DC4 /* Build configuration list for PBXProject "MyPace2" */ = {
+		1A7863A21D6206C9004C1DC4 /* Build configuration list for PBXProject "Pace SSS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1A7863B71D6206CA004C1DC4 /* Debug */,
