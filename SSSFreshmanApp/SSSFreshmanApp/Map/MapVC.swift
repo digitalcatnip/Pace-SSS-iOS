@@ -141,10 +141,13 @@ class MapsVC: UIViewController {
     func updateCampusWithLocation(location:CLLocation) {
         let plvLoc = locationForCampus("PLV")
         let nycLoc = locationForCampus("NYC")
-        if location.coordinate.latitude > plvLoc!.latitude {
+        let plvDist = plvLoc!.distanceToLocation(location)
+        let nycDist = nycLoc!.distanceToLocation(location)
+        
+        if plvDist < nycDist {
             curCampus = "PLV"
         }
-        else if (location.coordinate.latitude <= nycLoc!.latitude) {
+        else {
             curCampus = "NYC"
         }
         

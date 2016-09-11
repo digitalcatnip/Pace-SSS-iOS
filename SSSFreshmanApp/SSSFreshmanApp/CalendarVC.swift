@@ -11,7 +11,7 @@ import RealmSwift
 
 class CalendarVC: UIViewController {
     private let kKeychainItemName = "Google Calendar API"
-    private let kClientID = "69356504318-0197vfcpdlkrp6m82jc3jk8i1lvvp3b3.apps.googleusercontent.com"
+    private let kClientID = "1071382956425-pkjhpb11tkd9bn4bapln4uolidlml5b1.apps.googleusercontent.com"
     private let kCalendarID = "kd0jfkn4qikqq9fajturdappqc@group.calendar.google.com";  //SSS cal ID
 
     

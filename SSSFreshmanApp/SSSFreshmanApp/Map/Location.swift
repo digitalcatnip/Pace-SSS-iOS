@@ -60,4 +60,9 @@ class Location: NSObject {
         marker.icon = MarkerIcons.getImageForMarker(icon)
         marker.map = mapView
     }
+    
+    func distanceToLocation(location: CLLocation) -> CLLocationDistance {
+        let myLoc = CLLocation.init(latitude: latitude, longitude: longitude)
+        return myLoc.distanceFromLocation(location)
+    }
 }

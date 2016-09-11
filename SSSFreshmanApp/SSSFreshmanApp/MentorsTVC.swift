@@ -12,7 +12,7 @@ import RealmSwift
 
 class MentorsTVC: UITableViewController {
     private let kKeychainItemName = "Google Sheets API"
-    private let kClientID = "69356504318-0197vfcpdlkrp6m82jc3jk8i1lvvp3b3.apps.googleusercontent.com"
+    private let kClientID = "1071382956425-pkjhpb11tkd9bn4bapln4uolidlml5b1.apps.googleusercontent.com"
     
     // If modifying these scopes, delete your previously saved credentials by
     // resetting the iOS simulator or uninstall the app.

@@ -388,11 +388,11 @@
 				TargetAttributes = {
 					1A7863A61D6206C9004C1DC4 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = WP7AET382G;
+						DevelopmentTeam = 4GGJL4YQC2;
 					};
 				};
 			};
-			buildConfigurationList = 1A7863A21D6206C9004C1DC4 /* Build configuration list for PBXProject "Pace SSS" */;
+			buildConfigurationList = 1A7863A21D6206C9004C1DC4 /* Build configuration list for PBXProject "MyPace2" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -658,6 +658,7 @@
 					"$(PROJECT_DIR)/SSSFreshmanApp/GoogleAnalytics_3.14",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/SSSFreshmanApp/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -668,7 +669,7 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.digitalplight.PaceSSS.SSSFreshmanApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.pace.sss.freshman-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SSSFreshmanApp/Pace SSS-Bridging-Header.h";
 			};
@@ -686,6 +687,7 @@
 					"$(PROJECT_DIR)/SSSFreshmanApp/GoogleAnalytics_3.14",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/SSSFreshmanApp/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -697,7 +699,7 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.digitalplight.PaceSSS.SSSFreshmanApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.pace.sss.freshman-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SSSFreshmanApp/Pace SSS-Bridging-Header.h";
 			};
@@ -706,7 +708,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1A7863A21D6206C9004C1DC4 /* Build configuration list for PBXProject "Pace SSS" */ = {
+		1A7863A21D6206C9004C1DC4 /* Build configuration list for PBXProject "MyPace2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1A7863B71D6206CA004C1DC4 /* Debug */,
